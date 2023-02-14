@@ -3,6 +3,7 @@
         <head>
             <title>page title</title>
             <meta charset="utf-8">
+            <link rel="stylesheet" href="/LabExercises/Module 1/Exercise 2/css/style.css">
         </head>
         <body>
             <header>
@@ -16,8 +17,10 @@
                     </ul>
                 </nav>
                 <article>
-                    <h2>Artical heading</h2>
-                    <p>Prograph...</p>
+                    <h2>Buy this now</h2>
+                    <br>
+                    <p>You know you want to</p>
+                    <img src="/LabExercises/Module 1/images/4046692.jpg" alt="death star">
                     <a href="https://www.google.com/">More information...</a>
                 </article>
                 <aside>
@@ -27,9 +30,27 @@
                         <li><a href="#">Article 2</a></li>
                     </ul>
                 </aside>
+                <br>
+                <form action="#" class="buy">
+                    <label for="fname">First name:</label> 
+                    <input type="text" id="fname">
+                    <br>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname">
+                    <br>
+                    <label for="address">Address:</label>  
+                    <input type="text" id="address">
+                    <br>
+                    <button onclick="yourOrder()">Order Now</button>  
+                </form>
             </section>
             <footer>
                 <p>@copyright 2050 by nobody. all rights reversed</p>
             </footer>
+            <script>
+            function yourOrder() {
+                alert('Your Order will be shipped soon.')
+            }    
+            </script>
         </body>
     </html>
