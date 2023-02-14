@@ -5,20 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burnley FC</title>
-    <style>
-    body {
-        background-color: paleturquoise;
-    }
-    </style>
+    <link rel="stylesheet" href="/LabExercises/Module 1/Exercise 1/css/style2.css">
 </head>
 <body>
 <header>
-    <h2 style="color:crimson;">Home of the (soon to be) world's greatest football club</h2>
+    <h1>HOME OF THE (SOON TO BE) WORLD'S GREATEST FOOTBALL CLUB</h1>
     <img src="\LabExercises\Module 1\images\Burnley_F.C._Logo.svg.png" alt="Burnley logo" height="100">
 </header>
 <section>
     <nav>
-        <ul>
+        <ul class="nav">
             <li><a href="#"></a>News</li>
             <li><a href="#"></a>Results</li>
             <li><a href="#"></a>Table</li>
@@ -41,7 +37,7 @@
     </form>
     <br>
     <h3>We are top of the league!</h3>
-    <table border="solid 2px black">
+    <table border="solid 2px black" class="tool">
         <tr>
             <th>Club</th>
             <th>Matches Played</th>
@@ -59,9 +55,14 @@
         </tr>
     </table>
     <p>What is your favourite team colour?</p>
-    <input type="checkbox">Blue
-    <input type="checkbox">Claret
-    <p>Hello</p>
+    <label>
+        <input type="radio" name="gender" value="Blue">
+        Blue
+    </label>
+    <label>
+        <input type="radio" name="gender" value="Claret">
+        Claret
+    </label>
 </section>
 </body>
 </html>
