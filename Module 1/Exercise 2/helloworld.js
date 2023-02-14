@@ -23,7 +23,7 @@ console.dir(result);    // Score: -2, Comparative: -0.666
 
 function analyseSentence(sentence) {
     var sentiment = new Sentiment();
-    var result = sentiment.analyze(sentence);
+    var result = sentiment.analyse(sentence);
 
     return result.scroe;
 }
