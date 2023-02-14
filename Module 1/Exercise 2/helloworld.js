@@ -25,7 +25,7 @@ function analyseSentence(sentence) {
     var sentiment = new Sentiment();
     var result = sentiment.analyse(sentence);
 
-    return result.scroe;
+    return result.score;
 }
 
 console.log(analyseSentence('I love chocolate but i hate that it makes me fat.'))
