@@ -30,11 +30,30 @@ sayHello()
 
 // console.log(analyseSentence('I love chocolate but i hate that it makes me fat.'))
 
+sayHello()
 
-function sum(a, b) {
-    let result= a-b;
+function sum(c, d) {
+    let result = c-d;
     return result;
 }
 
-console.log(sum(10,5))
- 
+console.log(sum(20,2))
+
+sayHello()
+
+function sum(x, y) {
+    let result = x*y;
+    return result;
+}
+
+console.log(sum(69,10))
+
+sayHello()
+
+
+function sum(e, f) {
+    let result = e/f;
+    return result;
+}
+
+console.log(sum(66,11))
