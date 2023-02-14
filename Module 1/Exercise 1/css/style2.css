@@ -1,0 +1,23 @@
+body    {background-color: paleturquoise;
+         text-align: center;}
+
+h1      {color: crimson;
+        font-family: Arial, Helvetica, sans-serif;}
+
+.tool   {background-color: bisque;}
+
+th      {color: crimson;}
+
+table   {margin: 0 auto;}
+
+li      {font-weight: bold;
+        font-size: 200%;
+        padding: 10px;
+        background-color: bisque;
+        border: solid 2px crimson;}
+
+.nav    {list-style: none}
+
+.nav li {display: inline-block;}
+
+                          
