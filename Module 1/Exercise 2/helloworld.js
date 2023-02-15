@@ -6,13 +6,13 @@ function sayHello() {
 
 sayHello()
 
-function sum(a, b) {
+function add(a, b) {
     let result = a+b;
     return result;
 }
 
 
-console.log(sum(88,44))
+console.log(add(88,44))
 
 sayHello()
 
@@ -32,28 +32,44 @@ sayHello()
 
 sayHello()
 
-function sum(c, d) {
+function subtract(c, d) {
     let result = c-d;
     return result;
 }
 
-console.log(sum(20,2))
+console.log(subtract(20,2))
 
 sayHello()
 
-function sum(x, y) {
+function multiply(x, y) {
     let result = x*y;
     return result;
 }
 
-console.log(sum(69,10))
+console.log(multiply(69,10))
 
 sayHello()
 
 
-function sum(e, f) {
+function divide(e, f) {
     let result = e/f;
     return result;
 }
 
-console.log(sum(66,11))
+console.log(divide(66,11))
+
+
+function addsub(x, y, z) {
+    let result = x+y-z;
+    return result;
+}
+
+console.log(addsub(10, 3, 4))
+
+
+function bedmas(a, b, c, d) {
+    let result = a+b-c*d;
+    return result;
+}
+
+console.log(bedmas(69, 7 ,6 ,8))
