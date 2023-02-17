@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  </head>
+
+  <body>
+
+    <header>
+      <nav>
+        <!-- works like <a href="/index.html">Home</a> -->
+        <a href="/">Home</a>
+      </nav>
+    </header>
+
+    <br>
+
+    <main>
+      <form method="POST" action="http://localhost:3000/profile">
+        <div>
+          <label for="fname">First Name:</label>
+          <input type="text" name="fname" id="fname">
+        </div>
+        <br>
+        <div>
+          <label for="lname">Last Name:</label>
+          <input type="text" name="lname" id="lname">
+        </div>
+        <br>
+        <div>
+          <h4>Choose your starter:</h4>
+          <label for="char">Charmander</label>
+          <input type="radio" id="char" name="starter" value="Charmander">
+          <label for="bulb">Bulbasaur</label>
+          <input type="radio" id="bulb" name="starter" value="Bulbasaur">
+          <label for="squirt">Squirtle</label>
+          <input type="radio" id="squirt" name="starter" value="Squirtle">
+        </div>
+        <br>
+        <div>
+          <h4>Continents visited:</h4>
+          <label for="asia">Asia</label>
+          <input type="checkbox" id="asia" name="continent" value="asia">
+
+          <label for="africa">Africa</label>
+          <input type="checkbox" id="africa" name="continent" value="africa">
+
+          <label for="north">North America</label>
+          <input type="checkbox" id="north" name="continent" value="north">
+
+          <label for="south">South America</label>
+          <input type="checkbox" id="south" name="continent" value="south">
+
+          <label for="antarctica">Antarctica</label>
+          <input type="checkbox" id="antarctica" name="continent" value="antarctica">
+
+          <label for="euro">Europe</label>
+          <input type="checkbox" id="euro" name="continent" value="euro">
+
+          <label for="aus">Australia</label>
+          <input type="checkbox" id="aus" name="continent" value="aus">
+        </div>
+        <br>
+        <div>
+          <label for="player1">Player 1:</label>
+          <select name="player1" id="player1">
+            <option hidden></option>
+            <option value="raiden">Raiden</option>
+            <option value="scorpion">Scorpion</option>
+            <option value="sub-zero">Sub-Zero</option>
+            <option value="kano">Kano</option>
+            <option value="goro">Goro</option>
+          </select>
+        </div>
+        <br>
+        <button type="submit">Submit form</button>
+      </form>
+    </main>
+
+    <br>
+
+    <footer>Copyright 2021 &copy;</footer>
+
+  </body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>lab-1-html</title>
+  <meta charset=UTF-8">
+  <meta name="description" content="work for module 2 lab-1-html">
+  <meta name="keywords" content="semantic html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Adam Sagar">
+  <style>
+    th, tr, td {border: 1px solid black;}
+    table {border-collapse: collapse;}
+  </style>
+</head>
+
+<body>
+  
+  <header>
+    <nav>
+      <!-- works like <a href="/index.html">Home</a> -->
+      <a href="/">Home</a>
+      <a href="/form.html">Form</a>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>My HTML learning journey so far</h1>
+    <article>
+      <h2>Learnig elements - div, span, p, pre, ul, li, ol, article</h2>
+      <div>reduced cream</div>
+      <div>onion dip</div>
+      <div>salt and vin chips</div>
+      <span>Bulbasaur</span>
+      <span>Charmander</span>
+      <span>Squirtle</span>
+      <p>
+      p represents paragraph
+      </p>
+      <pre>
+      Text in         a pre element
+      is displayed in a fixed-width
+      font, and it preserves
+      both      spaces and
+      line breaks
+      </pre>
+      <ul>
+        <li>Iron Man</li>
+        <li>Thor</li>
+        <li>Cap</li>
+      </ul>
+      <ol>
+        <li>Batman</li>
+        <li>Wonder Woman</li>
+        <li>Superman</li>
+      </ol>
+    </article>
+    <article>
+      <h2></h2>
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">First header</th>
+            <th>Second header</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>First cell - first row</td>
+            <td>Second cell - first row</td>
+            <td>Third cell - first row</td>
+          </tr>
+          <tr>
+            <td>First cell - second row</td>
+            <td rowspan="2">Second cell - second row</td>
+            <td>Third cell - second row</td>
+          </tr>
+          <tr>
+            <td>First cell - third row</td>
+            <td>Second cell - third row</td>    
+          </tr>
+        </tbody>
+    </table>
+    <br>
+    </article>
+    <img src="https://picsum.photos/200/300" alt="" />
+    <br>
+    <video controls width="250">
+      <!-- <source src="/media/cc0-videos/flower.webm" type="video/webm">
+      <source src="/media/cc0-videos/flower.mp4" type="video/mp4"> -->
+      <source src="/20210410_130532.mp4" type="video/mp4">
+      Sorry, your browser doe not support embedded videos.
+    </video>
+    <br>
+    <!-- <audio controls src="/media/cc0-audio/t-rex-roar.mp3"> -->
+    <audio controls src="/Voice 001_sd.m4a">
+      Sorry, your browser does not support the <code>audio</code> element.
+    </audio>
+  </main>
+
+  <footer>Copyright 2021 &copy;</footer>
+
+</body>
+</html>
