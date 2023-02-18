@@ -2,24 +2,45 @@
 <html>
   <head>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@1,100&display=swap');
       /* I. Selectors */
       /* Put styles for sections 1.1, 1.2, 1.3 and 1.4 here */
+      article { margin: 20px 0; padding: 20px; border: 1px solid black; }
+      .style-me1 { color: red; }
+      #style-me2 { color: blue; }
+      #style-me2.style-me1 { color: purple; }      
       
-      article { margin: 20px 0; }
-
-      /* Put styles for sections 1.2, 1.3, 1.4 here */
-
+      /* Put styles for sections 2.1, 2.2 here */
+      .my-descendants-are-styled div { background-color: red; }
+      .my-children-are-styled > p { background-color: red; } 
 
       /* II. Box model and common properties */
-
+      .box {  margin: 20px; padding: 10px 20px 30px 40px; width: 30vw; height: 150px; border: 10px dashed lawngreen; 
+              box-sizing: border-box; overflow: auto; outline: solid 10px; border-radius: 50px;
+              background-image: url(https://upload.wikimedia.org/wikipedia/en/9/9f/Over_9000%21.png); background-size: contain;
+              background-repeat: no-repeat; background-position: center; background-color: hotpink;
+      }
 
       /* III. Position */
-
+      .position-absolute {  position: absolute; top: 30px; left: 30px; }
+      .position-relative { position: relative; top: 50px; left: 300px; }
+      .position-sticky { position: sticky; top: 100px; }
 
       /* IV. Styling text */
+      
+      .text-style { color: hotpink; font-size: 2em; line-height: 2.5; font-weight: bolder; font-family: 'Tourney', cursive; 
+                    text-align: center; letter-spacing: 1px; word-spacing: 0.2em; text-transform: uppercase;
+                    text-decoration: underline lawngreen;
+      }
 
-
+      /* V. Styling links */
+      a { color: orange; margin-right: 20px; text-decoration: none; }
+      a:visited { color: brown; }    
+      a:hover { text-decoration: underline; text-decoration-color: aqua; font-size: 1.5em; cursor: crosshair; }
+      a:active { text-transform: uppercase; background-color: gold; }
+      
       /* VI. calc() */
+      .calc-style { width: calc(100vw - 100px); }
 
     </style>
   </head>
@@ -77,7 +98,7 @@
         qui officia deserunt mollit anim id est laborum."
       </div>
       <div class="box" style="height: 200px">
-        My height is set using directly using style attribute.
+        My height is set directly using style attribute.
       </div>
     </article>
 
@@ -110,8 +131,9 @@
       <a
         href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links"
         alt="Styling links with Mozilla"
-        >Styling links (Mozilla)</a
-      >
+        >Styling links (Mozilla)
+      </a>
+      <a href="#">Don't click here</a>
     </article>
 
     <article>
