@@ -71,10 +71,13 @@
             border-radius: 20px;
             width: 34%;
             margin: 8px;
+            position: relative;
         }
 
         .aside h2 {
-            margin: 20px 20px 30px 20px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
         }
 
         .aside p {
@@ -84,7 +87,7 @@
         .flex-container {
             display: flex;
             flex-direction: row-reverse;
-            height: calc(100vh - 194.4px);
+            /* height: calc(100vh - 194.4px); */
         }
 
         .education {
@@ -96,7 +99,22 @@
             .flex-container { flex-direction: column-reverse; }
             .aside { width: auto; flex-grow: 1; }
             .main { width: auto; flex-grow: 2; }
+            .bio-container { flex-direction: column; }
+            img {height: 150px; }
 
+        }
+
+        img {
+            border-radius: 20px;
+            margin-left: 20px;
+            filter: grayscale(50%);
+            max-height: 200px;
+        }
+
+        .bio-container {
+            display: flex;
+            align-items: center;
+            height: 100%;
         }
 
     </style>
@@ -117,12 +135,20 @@
             </div>
             <div class="education">
                 <h2>Education</h2>
-                <p><strong> University - Wellington, New Zealand</strong> &mdash; BDes, Industrial Design &mdash; <em>Second Class Honours (Div 2)</em></p> 
+                <p><strong>Victoria University - Wellington, New Zealand</strong> &mdash; BDes, Industrial Design &mdash; <em>Second Class Honours (Div 2)</em></p> 
                 <p><strong>Institute of Data</strong> &mdash; Software Engineering</p>  
             </div>   
         </main>
         <aside class="aside">
-            <h2>Some text</h2>
+            <h2>Bio</h2>
+            <div class="bio-container">
+                <div>
+                    <img src="images/berlin-wall.jpg" alt="Me at the Berlin Wall">
+                </div>
+                <div>
+                    <p>Just starting my web development journey</p>
+                </div>
+            </div>
         </aside>
     </div>
 
