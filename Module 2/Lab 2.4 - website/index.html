@@ -1,58 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adam Sagar - Resume</title>
     <style>
-        :root { --red-munsell: #ec0b43ff;
-                --violet-jtc: #58355eff;
-                --aquamarine: #7ae7c7ff;
-                --tea-green: #d6ffb7ff; }
+        :root {
+            --cerulean: #0081a7ff;
+            --verdigris: #00afb9ff;
+            --light-yellow: #fdfcdcff;
+            --light-orange: #fed9b7ff;
+        }
 
-        body, p { font-size: 16px; margin: 0; font-family: Arial, Helvetica, sans-serif; }
-        .page { display: flex; flex-direction: row-reverse; height: 100vh; }
-        main { width: 75%; margin: 1.5em; }
-        aside { background-color: var(--tea-green); width: 25%; }
-        footer { background-color: var(--aquamarine); color: var(--violet-jtc); text-align: center; padding: 1.5em; }
-        img { border-radius: 50%; border: 0.5em solid var(--aquamarine); }
-        
+        * {
+            margin: 0;
+        }
+
+        body,
+        p {
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .page {
+            display: flex;
+            flex-direction: row-reverse;
+            height: calc(100vh - 66px);
+        }
+
+        main {
+            width: 75%;
+        }
+
+        aside {
+            background-color: var(--verdigris);
+            width: 25%;
+        }
+
+        footer {
+            background-color: var(--cerulean);
+            color: var(--light-yellow);
+            text-align: center;
+            padding: 1.5em;
+        }
+
+        img {
+            border-radius: 50%;
+            border: 5px solid var(--light-orange);
+            margin: auto;
+            justify-content: center;
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            margin-top: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--light-yellow);
+            padding: 1em;
+        }
+
+        .intro {
+            color: var(--light-yellow);
+            text-align: center;
+        }
+
+        .intro p {
+            margin-top: 20px;
+        }
+
+        .profile {
+            margin-top: 50px;
+            padding: 20px;
+            color: var(--light-yellow);
+        }
+
+        aside p {
+            color: var(--light-yellow);
+            margin-left: 20px;
+            padding: 20px 0 5px 20px;
+        }
+
+        .main-headings {
+            background-color: var(--light-yellow);
+            padding: 20px;
+            color: var(--light-orange);
+        }
+
+        .main-content {
+            background-color: var(--light-yellow);
+            padding: 20px;
+            color: var(--light-cerulean);
+        }
+
+        .profile-headings {
+            background-color: var(--cerulean);
+            padding: 20px;
+        }
+
+        main p {
+            color: var(--verdigris:);
+        }
+
+        @media screen and (max-width: 768px) {
+            .page { flex-direction: column-reverse; }
+            .main { width: 100%; }
+            .aside {width: 100%; }
+        }
+
     </style>
 </head>
+
 <body>
-    
+
     <div class="page">
-        
-        <main>
-            <section>
+        <main >
+            <section class="main">
+                <h2 class="main-headings">Experience</h2>
+                <p></p>
+                <h2 class="main-headings">Education</h2>
                 
-            </section>
-            <section>
-
-            </section>
-            <section>
-
+                    <h3>Victoria University, Wellington</h3>
+                    <p>BDes, Industrial Design &mdash; <strong>Second Class Honours (Div 2)</p>
+                    <h3>Institute of Data</h3>
+                    <p>Software Engineering</p>
             </section>
         </main>
 
         <aside>
-            <section>
-                <img src="images/berlin-wall.jpg" alt="Me at the Berlin Wall" height="200px" width="200px">
+            <h1>Adam Sagar - Web Developer</h1>
+            <section class="intro">
+                <img src="images/berlin-wall.jpg" alt="Me at the Berlin Wall" height="200px"
+                width="200px">
             </section>
-            <section>
-
-            </section>
-            <section>
-
+            <section class="profile">
+                <h2 class="profile-headings">Personal Info</h2>
+                <p>Email: adamschrissagar@gmail.com</p>
+                <p>Phone: +64 273309870</p>
+                <h2 class="profile-headings">Skills</h2>
+                <p>HTML - Beginner</p>
+                <p>CSS - Beginner</p>
+                <p>Javascript - Beginner</p>
             </section>
         </aside>
-
     </div>
 
     <footer>
-        <div>Created by Adam Sagar, 2023</div>
+        <p>&copy; 2023 Adam Sagar</p>
     </footer>
 
 </body>
+
 </html>
