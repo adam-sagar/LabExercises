@@ -25,6 +25,7 @@
 
         h1, h2, .footer {
             font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 0.2em;
         }
 
         .header { 
@@ -57,7 +58,7 @@
         }
 
         .main h2 {
-            margin: 20px 20px;
+            margin: 20px 20px 30px 20px;
         }
 
         .main p {
@@ -73,7 +74,7 @@
         }
 
         .aside h2 {
-            margin: 20px 20px;
+            margin: 20px 20px 30px 20px;
         }
 
         .aside p {
@@ -84,6 +85,10 @@
             display: flex;
             flex-direction: row-reverse;
             height: calc(100vh - 194.4px);
+        }
+
+        .education {
+            margin-top: 60px;
         }
 
         @media screen and (max-width: 768px) {
@@ -104,12 +109,20 @@
 
     <div class="flex-container">
         <main class="main">
-            <h2>Some more text</h2>
-            <p> dsfkjgkjdfgnkldfngfdngkdfnvkngsigjioawgiosadnviosiogsdgo</p>
+            <div class="skills">
+                <h2>Skills</h2>
+                <p>HTML - Beginner</p>
+                <p>CSS - Beginner</p>
+                <p>Javascript - Beginner</p>
+            </div>
+            <div class="education">
+                <h2>Education</h2>
+                <p><strong> University - Wellington, New Zealand</strong> &mdash; BDes, Industrial Design &mdash; <em>Second Class Honours (Div 2)</em></p> 
+                <p><strong>Institute of Data</strong> &mdash; Software Engineering</p>  
+            </div>   
         </main>
         <aside class="aside">
             <h2>Some text</h2>
-            <p>dfgfdghdhdhtdfhngkdfnhkdflnhlkdfnhlfkdnhlfdnkldfnhlkdfhnl</p>
         </aside>
     </div>
 
