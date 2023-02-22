@@ -58,17 +58,42 @@ function getBMI (height, weight) {
     return bmi
 }
 
-console.log(getBMI(1.83, 65));
+console.log(getBMI(1.63, 54));
+
+// write as an expression
+
+let getBMI2 = function(height, weight) {
+    let bmi = weight / (height * height);
+    return bmi
+}
+
+console.log(getBMI2(1.83, 65));
 
 function convertTemp (celsius) {
-    let ctof = celsius * 1.8 + 32;
-    return ctof
-   
+    let celsiusToFahrenheit = celsius * 1.8 + 32;
+    return celsiusToFahrenheit
 }
 
 console.log(convertTemp(30));
 
+let mylastName = "sagar";
 
+console.log(`My last name is ${mylastName}`);
+
+//this is a template literal
+let team = "Burnley";
+console.log(`The best team in the EFL is ${team}`);
+
+//string concatenation
+let myTeam = "Burnley";
+console.log('The best team in the EFL is ' + myTeam);
+
+
+function getGreeting(name) {
+return 'Hello ' + name + '!';
+}
+    
+console.log(getGreeting('adam'));
 //create your own object with multiple properties
 //make sure some are multiple values
 //add some functions
@@ -81,19 +106,22 @@ published: 2007,
 genre: 'fantasy',
 characters: ['Vin', 'Elend', 'Dockson', 'Hammond'],
 reading() {
-    console.log("I'm reading " + this.title);
+    console.log(`I'm reading ${this.title}`);
 }
 };
 
 console.log(book);
+
 book.reading();
 
 console.log(book.genre);
 
 console.log(book.characters[3]);
 
-// Try doing a for loop iteration here
+//for loop for book
 
-let mylastName = "sagar";
+function printObjectValues(object) {
+ 
+}
 
-console.log(`My last name is ${mylastName}`);
+console.log(book);
