@@ -100,14 +100,14 @@ console.log(getGreeting('adam'));
 //write a function to print out all names/values using for ... in
 
 const book = {
-title: 'The Well of Ascension',
-author: 'Brandon Sanderson',
-published: 2007,
-genre: 'fantasy',
-characters: ['Vin', 'Elend', 'Dockson', 'Hammond'],
-reading() {
-    console.log(`I'm reading ${this.title}`);
-}
+    title: 'The Well of Ascension',
+    author: 'Brandon Sanderson',
+    published: 2007,
+    genre: 'fantasy',
+    characters: ['Vin', 'Elend', 'Dockson', 'Hammond'],
+    reading() {
+        console.log(`I'm reading ${this.title}`);
+    }
 };
 
 console.log(book);
@@ -125,3 +125,40 @@ function printObjectValues(object) {
 }
 
 console.log(book);
+
+
+
+
+let longString = 'This is a really loooooooooooog string';
+let shortString = 'abc';
+
+function truncate(fullString, maxChars) {
+    //return a truncated version of fullString that is maxChars characters long
+    return fullString.substring(0, maxChars)
+}
+
+console.log(truncate(longString, 10))
+console.log(truncate(shortString, 10))
+
+const user1 = {
+    name: 'Adam',
+    location: 'Christchurch',
+    toString() {
+        return `Name: ${this.name}, Location: ${this.location}`;
+    }
+}
+
+console.log(`This user is ${user1}`);
+
+
+
+const Burnley = {
+    position: '1st',
+    numberOfWins: '21',
+    chanceOfPromotion: 'High',
+    toString() {
+        return `Burnley are currently ${this.position} in the EFL with ${this.numberOfWins} wins. Their chance of promotion is ${this.chanceOfPromotion}`;
+    }
+}
+
+console.log(`My favourite team ${Burnley}`);

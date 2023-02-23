@@ -101,23 +101,21 @@ console.log(result);
 
 
 
-//function declaration
+// function declaration
 
 // function getGreeting(name) {
 // return 'Hello ' + name + '!';                           
 // }
 
 
-
-//function expression
+// function expression
 
 // const getGreeting = function(name) {      
 //     return 'Hello ' + name + '!';                       
 // };
 
 
-
-//arrow function
+// arrow function
 
 const getGreeting = name => 'Hello ' + name + '!';        
 
@@ -144,11 +142,15 @@ const inigo = {
         let greeting = `Hello ${person.name}. My name is ${this.firstName} ${this.lastName}. `;
         console.log(greeting + this.getCatchPhrase(person));
     },
+    // getCatchPhrase(person) {
+    //     if (person.numFingers === 6) {
+    //         return 'You killed my father. Prepare to die';
+    //         } else {
+    //         return 'Nice to meet you.';
+    //         }
+    //     }
     getCatchPhrase(person) {
-        if (person.numFingers === 6) {
-            return 'You killed my father. Prepare to die';
-        } else {
-        return 'Nice to meet you.';
+        return person.numFingers === 6 ? 'You killed my father. Prepare to die.' : 'Nice to meet you.'; //remember to include what you want the code to do i.e. return
         }
     }
 
@@ -157,3 +159,77 @@ const inigo = {
 
 
 
+
+//need to use return this -basketballGame is 'this' (function is inside the object) and score is a property of it
+//can't call halfTime method outside of object so log basketballGame instead
+// ++ increments by 1 and += assigns the addition operator
+//Get to fulltime by copy and pasting up the chain up until halftime and then changing second halftime to fulltime. Add a fullTime function in the object (make sure to add return this).
+const basketballGame = {
+    score: 0,
+    freeThrow() {
+        this.score++;
+        return this;
+    },
+    foul: 0,
+    foulCount() {
+        this.foul++;
+        return this;
+    },
+    basket() {
+        this.score += 2;
+        return this
+    },
+    threePointer() {
+        this.score += 3;
+        return this
+    },
+    halfTime() {
+        console.log('Halftime score is '+this.score+' with a foul count of '+this.foul);
+        return this
+    },
+    fullTime() {
+        console.log('Fulltime score is '+this.score+' with a foul count of '+this.foul);
+        return this
+    }
+}
+        //modify each of the above object methods to enable function chaining as below:
+        basketballGame.basket().freeThrow().freeThrow().foulCount().basket().threePointer().halfTime().foulCount().basket().freeThrow().foulCount().freeThrow().basket().threePointer().fullTime();
+
+    console.log(basketballGame);
+
+
+
+
+
+const sydney = {
+    name: 'Sydney',
+    population: 5_121_000,
+    state: 'NSW',
+    founded: '26 January 1788',
+    timezone: 'Australia/Sydney'
+}
+
+function printObject(city) {
+    for (cityProp in city)
+    {console.log(city)}
+}
+
+printObject(sydney);
+
+
+
+
+const melbourne = {
+    name: 'Melbourne',
+    population: 4_917_750,
+    state: 'Victoria',
+    founded: '30 August 1835',
+    timezone: 'AEST'
+}
+
+function printObject2(city2) {
+    for (cityProp in city2)
+    {console.log(city2)}
+}
+
+printObject2(melbourne);
