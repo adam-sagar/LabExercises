@@ -1,3 +1,5 @@
+console.log('\n QUESTION 1');
+
 console.log(Number("" + 1 + 0));
 //10
 console.log(Number("" - 1 + 0));
@@ -35,7 +37,7 @@ console.log(typeof(" \t \n" -2));
 
 
 
-
+console.log('\n QUESTION 2');
 
 let three = "3" //<- These are strings
 let four = "4"
@@ -67,7 +69,7 @@ console.log(lessThan2);
 
 
 
-
+console.log('\n QUESTION 3');
 
 if (0) console.log('#1 zero is true')
 //won't print
@@ -82,7 +84,7 @@ if (1) console.log('positive is true')
 
 
 
-
+console.log('\n QUESTION 4');
 
 // let a = 2, b = 3;
 // let result = `${a} + ${b} is `;
@@ -100,6 +102,7 @@ console.log(result);
 
 
 
+console.log('\n QUESTION 5');
 
 // function declaration
 
@@ -123,7 +126,7 @@ console.log(getGreeting('adam'));
 
 
 
-
+console.log('\n QUESTION 6');
 
 const westley = {
     name: 'Westley',
@@ -158,7 +161,7 @@ const inigo = {
     inigo.greeting(rugen)
 
 
-
+console.log('\n QUESTION 7');
 
 //need to use return this -basketballGame is 'this' (function is inside the object) and score is a property of it
 //can't call halfTime method outside of object so log basketballGame instead
@@ -199,8 +202,12 @@ const basketballGame = {
 
 
 
+    console.log('\n QUESTION 8');
 
-
+//for ...in loops for objects (use for ...of for arrays)
+//imagine the 'for' as the 'if' in an if statement
+//syntax: for (-the how- 'in' -parameter-)
+//              {statement e.g. console.log(parameter)}
 const sydney = {
     name: 'Sydney',
     population: 5_121_000,
@@ -216,9 +223,6 @@ function printObject(city) {
 
 printObject(sydney);
 
-
-
-
 const melbourne = {
     name: 'Melbourne',
     population: 4_917_750,
@@ -233,3 +237,76 @@ function printObject2(city2) {
 }
 
 printObject2(melbourne);
+
+
+
+console.log('\n QUESTION 9');
+
+let teamSports = ['Hockey', 'Cricket', 'Volleyball'];
+let dog1 = 'Bingo';
+let cat1 = { name: 'Fluffy', breed: 'Siberian' };
+
+
+let moreSports = teamSports;
+
+console.log(moreSports.unshift('Football', 'Rugby'));
+
+console.log(moreSports); 
+console.log(teamSports); 
+
+console.log(moreSports.push('Basketball'));
+
+console.log(moreSports);
+console.log(teamSports); //objects point to the same reference in memory so changing one, changes the other
+
+
+let dog2 = dog1;
+dog2 = 'Lassie'; //primitives like strings, numbers, booleans are stored by value, not reference, so remain independent
+
+console.log(dog1);
+
+
+// let cat2 = cat1;
+let cat2 = {...cat1} //create a clone
+cat2.name = 'Buffy' //cat1 name will remain unchanged because it's independent
+    
+console.log(cat1.name);
+console.log(cat2.name);
+
+
+console.log(teamSports); //changed because it's pointing to the same reference as moreSports, which was changed 
+console.log(dog1); //the same because it's a primitive which stores the value, which remains independent
+console.log(cat1.name); //changed because it's pointing to the same reference as cat2, which was changed
+
+
+
+console.log('\n QUESTION 10');
+
+
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    this.human = true;
+    this.canDrive = age > 16;
+}
+
+
+//using new operator to create people from 'Person' blueprint
+const person1 = new Person('Adam', 35);
+const person2 = new Person('Carl', 42);
+
+console.log(person1);
+console.log(person2);
+
+
+//rewriting the function as a class
+const classPerson = class {
+    constructor (name, age) {
+    this.name = name;
+    this.age = age;
+    this.human = true;
+    }
+}
+
+const person3 = new classPerson('Lenny', 43);
+console.log(person3);
