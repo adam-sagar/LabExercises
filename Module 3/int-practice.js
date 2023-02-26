@@ -1,36 +1,36 @@
-// let longString = 'This is a really loooooooooooog string';
-// let shortString = 'abc';
+let longString = 'This is a really long string of some importance';
+let shortString = 'abc';
 
-// function truncate(fullString, maxChars) {
-//     //return a truncated version of fullString that is maxChars characters long
-//     return fullString.substring(0, maxChars)
-// }
+function truncate(fullString, maxChars) {
+    //return a truncated version of fullString that is maxChars characters long
+    return fullString.substring(0, maxChars)
+}
 
-// console.log(truncate(longString, 10))
-// console.log(truncate(shortString, 10))
+console.log(truncate(longString, 10))
+console.log(truncate(shortString, 10))
 
-// const user1 = {
-//     name: 'Adam',
-//     location: 'Christchurch',
-//     toString() {
-//         return `Name: ${this.name}, Location: ${this.location}`;
-//     }
-// }
+const user1 = {
+    name: 'Adam',
+    location: 'Christchurch',
+    toString() {
+        return `Name: ${this.name}, Location: ${this.location}`;
+    }
+}
 
-// console.log(`This user is ${user1}`);
+console.log(`This user is ${user1}`);
 
 
 
-// const Burnley = {
-//     position: '1st',
-//     numberOfWins: '21',
-//     chanceOfPromotion: 'High',
-//     toString() {
-//         return `Burnley are currently ${this.position} in the EFL with ${this.numberOfWins} wins. Their chance of promotion is ${this.chanceOfPromotion}`;
-//     }
-// }
+const Burnley = {
+    position: '1st',
+    numberOfWins: '21',
+    chanceOfPromotion: 'High',
+    toString() {
+        return `Burnley are currently ${this.position} in the EFL with ${this.numberOfWins} wins. Their chance of promotion is ${this.chanceOfPromotion}`;
+    }
+}
 
-// console.log(`My favourite team ${Burnley}`);
+console.log(`My favourite team ${Burnley}`);
 
 
 
@@ -52,52 +52,52 @@ console.log(product.valueOf());
 
 
 
-// let million = 1_000_000;
-// let billion = 1_000_000_000;
+let million = 1_000_000;
+let billion = 1_000_000_000;
 
-// console.log(million);
-// console.log(billion);
-
-
+console.log(million);
+console.log(billion);
 
 
-// const product2 = {
-//     name: 'Average Product',
-//     category: 'Useful Things',
-//     price: 15.00,
-//     discount_percent: 15,
-//     gst_percent: 10,
-//     //defines how this object is treated as a number
-//     valueOf() {
-//         //take the discount and gst into account
-//         return this.price - (this.price * (this.discount_percent/100)) + (this.price * (this.gst_percent/100))
-//     },
-//     //defines how this object is represented as a string
-//     toString() {
-//         return `${this.name} (${this.category})`
-//     }    
-// }
+
+
+const product2 = {
+    name: 'Average Product',
+    category: 'Useful Things',
+    price: 15.00,
+    discount_percent: 15,
+    gst_percent: 10,
+    //defines how this object is treated as a number
+    valueOf() {
+        //take the discount and gst into account
+        return this.price - (this.price * (this.discount_percent/100)) + (this.price * (this.gst_percent/100))
+    },
+    //defines how this object is represented as a string
+    toString() {
+        return `${this.name} (${this.category})`
+    }    
+}
 
 
 const cities_au = ['Sydney', 'Melbourne', 'Adelaide', 'Cairns', 'Brisbane']
 const cities_nz = ['Auckland', 'Christchurch', 'Hamilton', 'Wellington', 'Queenstown']
 
-// cities_nz.push('Dunedin')
-// console.log(cities_nz);
+cities_nz.push('Dunedin')
+console.log(cities_nz);
 
-// cities_au.unshift('Perth')
-// console.log(cities_au);
+cities_au.unshift('Perth')
+console.log(cities_au);
 
-// let fisrtNZCities = cities_nz.slice(0, 3)
-// console.log(fisrtNZCities);
+let fisrtNZCities = cities_nz.slice(0, 3)
+console.log(fisrtNZCities);
 
-// cities_au.splice(4, 0, 'Townsville')
-// console.log(cities_au);
+cities_au.splice(4, 0, 'Townsville')
+console.log(cities_au);
 
-// cities_nz.splice(2, 0, 'Tauranga')
-// console.log(cities_nz);
+cities_nz.splice(2, 0, 'Tauranga')
+console.log(cities_nz);
 
-// cities_nz.forEach((city, index) => console.log(`${index}: ${city}`))
+cities_nz.forEach((city, index) => console.log(`${index}: ${city}`))
 
 const people = [
     {firstName: 'Wendy', lastName: 'Darton', age: 52, location: 'QLD'},
