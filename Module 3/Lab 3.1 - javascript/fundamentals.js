@@ -3,7 +3,7 @@ console.log('\n QUESTION 1');
 console.log(Number("" + 1 + 0));
 //10
 console.log(Number("" - 1 + 0));
-//-1 -because subtraction overrides the concatenation
+//-1 - because subtraction overrides the concatenation
 console.log(Number(true + false));
 //1
 console.log(Number(!true));
@@ -21,7 +21,7 @@ console.log(Number("4" - 2));
 console.log(Number("4px" - 2));
 //Nan
 console.log(Number(" -9 " + 5));
-//Nan -it's a string because of concatenation
+//Nan - it's a string because of concatenation
 console.log(Number(" -9 " - 5));
 //-14
 console.log(Number(null + 1));
@@ -29,9 +29,9 @@ console.log(Number(null + 1));
 console.log(Number(undefined + 1));
 //Nan
 console.log(Number(undefined == null));
-//1 -it's true that they are equivalent (true = 1)
+//1 - it's true that they are equivalent (true = 1)
 console.log(Number(undefined === null));
-//0 -they are equivalent in that they both represent the absence of a value but they have different types (undefined has type undefined whereas null is an object)
+//0 - they are equivalent in that they both represent the absence of a value but they have different types (undefined has type undefined whereas null is an object)
 console.log(typeof(" \t \n" -2));
 //-2 -string converts to 0 because of the empty spaces?
 
@@ -44,7 +44,7 @@ let four = "4"
 let thirty = "30" 
 
 let addition = three + four;
-//not correct -values are strings so are concatenated with the + operator
+//not correct - values are strings so are concatenated with the + operator
 console.log(addition);
 
 let multiplication = three * four;
@@ -64,7 +64,7 @@ let lessThan1 = three < four;
 console.log(lessThan1);
 
 let lessThan2 = thirty < four;
-//not correct -thirty is a string so it's 3 and 0 (which is < 4) not 30
+//not correct - thirty is a string so it's 3 and 0 (which is < 4) not 30
 console.log(lessThan2);
 
 
@@ -204,7 +204,7 @@ const basketballGame = {
 
     console.log('\n QUESTION 8');
 
-//for ...in loops for objects (use for ...of for arrays)
+//for...in loops for objects (use for...of for arrays)
 //imagine the 'for' as the 'if' in an if statement
 //syntax: for (-the how- 'in' -parameter-)
 //              {statement e.g. console.log(parameter)}
