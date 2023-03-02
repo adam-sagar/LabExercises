@@ -74,7 +74,7 @@ console.log(animals.sort());
 
 //write a function to replace middle value
 function replaceMiddleAnimal(newValue) {
-    let halfway = animals.length / 2;       //need to create a variable that is at the halfway index of the array
+    let halfway = animals.length / 2;       //need to create a variable that is at the halfway index of the array.
     animals[halfway] = newValue;
     return animals;
 }
@@ -82,7 +82,7 @@ function replaceMiddleAnimal(newValue) {
 console.log(replaceMiddleAnimal('Cheetah'));
 
 
-//Write a function that returns a new array containing all the animals that begin with the beginsWith string
+//Write a function that returns a new array containing all the animals that begin with the beginsWith string.
 function findMatchingAnimals(beginsWith) {
     return animals.filter(animal => animal.startsWith(beginsWith))
 }
@@ -90,7 +90,7 @@ function findMatchingAnimals(beginsWith) {
 console.log(findMatchingAnimals('Z'));
 
 
-//regardless of upper/lower case - convert both the array and beginsWith argument into lower case before comparing them
+//regardless of upper/lower case - convert both the array and beginsWith argument into lower case before comparing them.
 function findMatchingAnimals(beginsWith) {
     const lowerCaseBeginsWith = beginsWith.toLowerCase();
     return animals.filter(animal => animal.toLowerCase().startsWith(lowerCaseBeginsWith))
@@ -106,7 +106,7 @@ console.log('\n QUESTION 4')
 
 // function camelCase (cssProp) {
 //     let words = cssProp.split('-')
-//     for (i = 1; i < words.length; i++) {     //i = 1 means it iterates over the second word in the array
+//     for (i = 1; i < words.length; i++) {     //i = 1 means it iterates over the second word in the array.
 //     words[i] = words[i][0].toUpperCase() + words[i].substring(1);
 //     }
 //     return words.join('');
@@ -116,9 +116,10 @@ console.log(camelCase('margin-left'));
 console.log(camelCase('background-image'));
 console.log(camelCase('padding-top ' + 'border-bottom'));
 
+
 // write as another type of for loop
 function camelCase(cssProp) {
-    let words = cssProp.split('-')      //words is the function to split cssProp into an array - we need camelString variable to put the new array that's iterated over into 
+    let words = cssProp.split('-')      
     let camelString = '';
     // words.forEach(word, i => {
     // camelString +=
@@ -129,6 +130,10 @@ function camelCase(cssProp) {
     return camelString
 }
 
+//words is the function to split cssProp into an array - we need camelString variable to store the converted string inside of.
+// camelString += is shorthand for camelString = camelString +, i.e. it appends the result of the conditional expression to the camelString variable.
+// (camelString.length == 0) is a condition that checks whether camelString is empty. This is used to determine whether the first word in the words array should be added to camelString as-is, or if it should be converted to camel case format.
+
 
 
 
@@ -137,22 +142,152 @@ console.log('\n QUESTION 5')
 
 let twentyCents = 0.20
 let tenCents = 0.10
+
 console.log(`${twentyCents} + ${tenCents} = ${twentyCents + tenCents}`)
 // 0.2 + 0.1 = 0.30000000000000004
 
 let fixedTwenty = twentyCents.toFixed(2);
 let fixedTen = tenCents.toFixed(2);
-console.log((fixedTwenty) + (fixedTen)); //why is this not working? It's not working becasue .toFixed() returns a string, meaning they will be concatenated together instead of being added
-
-//use parseFloat to return numbers that can be added togther
-let sum = parseFloat(fixedTwenty) + parseFloat(fixedTen);
-console.log(sum.toFixed(2));
+console.log((fixedTwenty) + (fixedTen)); //why is this not working? - they are concatenated together because .toFixed() returns a string
 
 
-
-
+// function currencyAddition(float1, float2) {
+//     let sum = (float1 + float2).toFixed(2)
+//     return sum
+// }
 
 
 function currencyAddition(float1, float2) {
-    
+    let sum = (float1 * 100 + float2 * 100) / 100;
+    return sum.toFixed(2)
 }
+
+console.log(currencyAddition(0.1, 0.2));
+console.log(currencyAddition(0.2, 0.5));
+console.log(0.3 == currencyAddition(0.1, 0.2));
+console.log(0.3 == currencyAddition(0.1, 0.2, '+'));
+
+
+// function currencyOperation(float1, float2, operation, numDecimals) {
+//     switch (float1, float2, operation) {
+//         case '+':
+//             console.log(((float1 * 100 + float2 * 100) / 100).toFixed(numDecimals));
+//             break;
+//         case '-':
+//             console.log(((float1 * 100 - float2 * 100) / 100).toFixed(numDecimals));
+//             break;
+//         case '/':
+//             console.log(((float1 * 100) / (float2 * 100)).toFixed(numDecimals));
+//             break;
+//         case '*':
+//             console.log((float1 * float2).toFixed(numDecimals));
+//             break;
+//         default:
+//             console.log('Please check your input');
+//     }
+// }
+
+//rewritten in a more efficient way
+function currencyOperation(float1, float2, operation, numDecimals) {
+    let result = 0;
+    let adjustedFloat1 = float1 * 100 / 100;
+    let adjustedFloat2 = float2 * 100 / 100;
+    
+    switch (operation) {
+        case '+':
+            result = (adjustedFloat1 + adjustedFloat2).toFixed(numDecimals);
+            break;
+        case '-':
+            result = (adjustedFloat1 - adjustedFloat2).toFixed(numDecimals);
+            break;
+        case '/':
+            result = (adjustedFloat1 / adjustedFloat2).toFixed(numDecimals);
+            break;
+        case '*':
+            result = (adjustedFloat1 * adjustedFloat2).toFixed(numDecimals);
+            break;
+    }
+    return result
+}
+
+console.log(currencyOperation(0.1, 0.2, '+', 10));
+console.log(currencyOperation(0.9, 0.8, '-',2));
+console.log(currencyOperation(0.3, 0.9, '/', 3));
+console.log(currencyOperation(0.5, 0.7, '*',5));
+console.log(currencyOperation(0.2, 0.8, 'a',7));
+
+
+
+
+
+console.log('\n QUESTION 6')
+
+function unique(duplicatesArray) {
+    const newSet = new Set(duplicatesArray);
+    const newArray = Array.from(newSet)
+    return newArray;
+}
+
+const colours = ['red', 'green', 'blue', 'yellow', 'orange', 'red', 'blue', 'yellow']
+const testScores = [55, 84, 97, 63, 55, 32, 84, 91, 55, 43]
+const zFighters = ['Goku', 'Gohan', 'Vegeta', 'Piccolo', 'Gohan', 'Yamcha', 'Goku', 'Tien', 'Krillin', 'Vegeta', 'Chiaotzu']
+console.log(unique(colours)); // [ 'red', 'green', 'blue', 'yellow', 'orange' ]
+console.log(unique(testScores)); // [ 55, 84, 97, 63, 32, 91, 43 ]
+console.log(unique(zFighters));
+
+
+
+
+
+console.log('\n QUESTION 7')
+
+const books = [
+    { id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', year: 1925 },
+    { id: 2, title: 'To Kill a Mockingbird', author: 'Harper Lee', year: 1960 },
+    { id: 3, title: '1984', author: 'George Orwell', year: 1949 },
+    { id: 4, title: 'Brave New World', author: 'Aldous Huxley', year: 1932 },
+    { id: 5, title: 'The Catcher in the Rye', author: 'J.D. Salinger', year: 1951 },
+    ];
+
+function getBookTitle(bookId) {
+    let matchingTitle = books.find(book => {
+        if (bookId === book.id) {
+        return book.title;}
+    });
+    return matchingTitle;
+}
+
+console.log(getBookTitle(1));
+console.log(getBookTitle(3));
+
+
+function getOldBooks() {
+    let oldBooks = books.filter(book => {
+        if (book.year < 1950) {
+        return book.title;}
+    });
+    return oldBooks;
+}
+
+console.log(getOldBooks());
+
+
+function addGenre() {
+    let newGenre = books.map(book => {
+        book.genre = 'classic';
+        return books;
+    });
+    return newGenre;
+}
+
+console.log(addGenre());
+
+
+// function addGenre() {
+//     let newGenre = books.map(book => {
+//         return {...book, genre: 'classic'}
+//     });
+//     return newGenre;
+// }
+
+// console.log(addGenre());
