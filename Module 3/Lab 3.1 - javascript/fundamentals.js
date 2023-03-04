@@ -1,39 +1,41 @@
 console.log('\n QUESTION 1');
 
 console.log(Number("" + 1 + 0));
-//10
+// 10
 console.log(Number("" - 1 + 0));
-//-1 - because subtraction overrides the concatenation
+// -1   because subtraction overrides the concatenation
 console.log(Number(true + false));
-//1
+// 1
 console.log(Number(!true));
-//0
+// 0
 console.log(Number(6 / "3"));
-//2
+// 2
 console.log(Number("2" * "3"));
-//6
+// 6
 console.log(Number(4 + 5 + "px"));
-//Nan
+// Nan
 console.log(Number("$" + 4 + 5));
-//Nan
+// Nan
 console.log(Number("4" - 2));
-//2
+// 2
 console.log(Number("4px" - 2));
-//Nan
+// Nan
 console.log(Number(" -9 " + 5));
-//Nan - it's a string because of concatenation
+// Nan  it's a string because of concatenation
 console.log(Number(" -9 " - 5));
-//-14
+// -14
 console.log(Number(null + 1));
-//1
+// 1
 console.log(Number(undefined + 1));
-//Nan
+// Nan
 console.log(Number(undefined == null));
-//1 - it's true that they are equivalent (true = 1)
+// 1    it's true that they are equivalent (true = 1)
 console.log(Number(undefined === null));
-//0 - they are equivalent in that they both represent the absence of a value but they have different types (undefined has type undefined whereas null is an object)
+// 0    they are equivalent in that they both represent the absence of a value but they have different types (undefined has type undefined whereas null is an object)
 console.log(typeof(" \t \n" -2));
-//-2 -string converts to 0 because of the empty spaces?
+// -2   string converts to 0 because of the empty spaces?
+
+
 
 
 
@@ -44,27 +46,27 @@ let four = "4"
 let thirty = "30" 
 
 let addition = three + four;
-//not correct - values are strings so are concatenated with the + operator
+// not correct - values are strings so are concatenated with the + operator
 console.log(addition);
 
 let multiplication = three * four;
-//correct
+// correct
 console.log(multiplication);
 
 let division = three / four;
-//correct
+// correct
 console.log(division);
 
 let subtraction = three - four;
-//correct
+// correct
 console.log(subtraction);
 
 let lessThan1 = three < four;
-//correct
+// correct
 console.log(lessThan1);
 
 let lessThan2 = thirty < four;
-//not correct - thirty is a string so it's 3 and 0 (which is < 4) not 30
+// not correct - thirty is a string so it's 3 and 0 (which is < 4) not 30
 console.log(lessThan2);
 
 
@@ -72,15 +74,17 @@ console.log(lessThan2);
 console.log('\n QUESTION 3');
 
 if (0) console.log('#1 zero is true')
-//won't print
+// won't print
 if ("0") console.log('#2 zero is true')
-//will print
+// will print
 if (null) console.log('null is true')
-//won't print
+// won't print
 if (-1) console.log('negative is true')
-//will print
+// will print
 if (1) console.log('positive is true')
-//will print
+// will print
+
+
 
 
 
@@ -96,9 +100,11 @@ console.log('\n QUESTION 4');
 
 let a = 2, b = 3;
 let result = `${a} + ${b} is ${a + b < 10 ? 'less than 10' : 'greater than 10'}`;
-                            //(condition) ? (expressionIfTrue) : (expressionIfFalse);
+                            // (condition) ? (expressionIfTrue) : (expressionIfFalse);
 
 console.log(result);
+
+
 
 
 
@@ -153,7 +159,7 @@ const inigo = {
     //         }
     //     }
     getCatchPhrase(person) {
-        return person.numFingers === 6 ? 'You killed my father. Prepare to die.' : 'Nice to meet you.'; //remember to include what you want the code to do i.e. return
+        return person.numFingers === 6 ? 'You killed my father. Prepare to die.' : 'Nice to meet you.'; // remember to include what you want the code to do i.e. return
         }
     }
 
@@ -161,12 +167,15 @@ const inigo = {
     inigo.greeting(rugen)
 
 
+
+
+
 console.log('\n QUESTION 7');
 
-//need to use return this -basketballGame is 'this' (function is inside the object) and score is a property of it
-//can't call halfTime method outside of object so log basketballGame instead
+// need to use return this -basketballGame is 'this' (function is inside the object) and score is a property of it
+// can't call halfTime method outside of object so log basketballGame instead
 // ++ increments by 1 and += assigns the addition operator
-//Get to fulltime by copy and pasting up the chain up until halftime and then changing second halftime to fulltime. Add a fullTime function in the object (make sure to add return this).
+// get to fulltime by copy and pasting up the chain up until halftime and then changing second halftime to fulltime. Add a fullTime function in the object (make sure to add return this).
 const basketballGame = {
     score: 0,
     freeThrow() {
@@ -202,12 +211,15 @@ const basketballGame = {
 
 
 
+
+
     console.log('\n QUESTION 8');
 
-//for...in loops for objects (use for...of for arrays)
-//imagine the 'for' as the 'if' in an if statement
-//syntax: for (-the how- 'in' -parameter-)
-//              {statement e.g. console.log(parameter)}
+// for...in loops for objects (use for...of for arrays)
+// imagine the 'for' as the 'if' in an if statement
+// syntax: for (-the how- 'in' -parameter-)
+//             {statement e.g. console.log(parameter)}
+
 const sydney = {
     name: 'Sydney',
     population: 5_121_000,
@@ -240,6 +252,8 @@ printObject2(melbourne);
 
 
 
+
+
 console.log('\n QUESTION 9');
 
 let teamSports = ['Hockey', 'Cricket', 'Volleyball'];
@@ -257,26 +271,28 @@ console.log(teamSports);
 console.log(moreSports.push('Basketball'));
 
 console.log(moreSports);
-console.log(teamSports); //objects point to the same reference in memory so changing one, changes the other
+console.log(teamSports); // objects point to the same reference in memory so changing one, changes the other
 
 
 let dog2 = dog1;
-dog2 = 'Lassie'; //primitives like strings, numbers, booleans are stored by value, not reference, so remain independent
+dog2 = 'Lassie'; // primitives like strings, numbers, booleans are stored by value, not reference, so remain independent
 
 console.log(dog1);
 
 
 // let cat2 = cat1;
-let cat2 = {...cat1} //create a clone
-cat2.name = 'Buffy' //cat1 name will remain unchanged because it's independent
+let cat2 = {...cat1} // create a clone
+cat2.name = 'Buffy' // cat1 name will remain unchanged because it's independent
     
 console.log(cat1.name);
 console.log(cat2.name);
 
 
-console.log(teamSports); //changed because it's pointing to the same reference as moreSports, which was changed 
-console.log(dog1); //the same because it's a primitive which stores the value, which remains independent
-console.log(cat1.name); //changed because it's pointing to the same reference as cat2, which was changed
+console.log(teamSports); // changed because it's pointing to the same reference as moreSports, which was changed 
+console.log(dog1); // the same because it's a primitive which stores the value, which remains independent
+console.log(cat1.name); // changed because it's pointing to the same reference as cat2, which was changed
+
+
 
 
 
@@ -291,7 +307,7 @@ function Person(name, age) {
 }
 
 
-//using new operator to create people from 'Person' blueprint
+// using new operator to create people from 'Person' blueprint
 const person1 = new Person('Adam', 35);
 const person2 = new Person('Carl', 42);
 
@@ -299,7 +315,7 @@ console.log(person1);
 console.log(person2);
 
 
-//rewriting the function as a class
+// rewriting the function as a class
 const classPerson = class {
     constructor (name, age) {
     this.name = name;

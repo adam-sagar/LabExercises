@@ -202,3 +202,174 @@ const kiwi = new Kiwi('Kevin', "20cm");
 console.log(`${kiwi.name} has a beak length of ${kiwi.beakLength}`);
 kiwi.fly();
 kiwi.stop();
+
+
+
+
+
+//write a function checkDate, similar to above, that throws an error if the date is parsed as invalid and implements catch/finally
+const testDate = new Date('this is not a date')
+console.log(testDate) //Invalid Date
+console.log(testDate == 'Invalid Date')
+
+function checkDate(date) {
+    try {
+        const testDate = new Date(date)
+        if (testDate == 'Invalid Date') {
+            throw new SyntaxError('This is not a valid date')
+        }
+        return true;
+  
+    } catch (err) {
+        if (err instanceof SyntaxError) {
+            console.log(err.message);
+        } else {
+            throw err;
+        }
+    }
+    finally {
+        console.log('at the end');
+    }
+    return false;
+}
+
+
+console.log(checkDate('could be a date or could not'));
+console.log(checkDate('2023/03/03'));
+
+
+
+
+// ASYNCHRONOUS PROGRAMMING
+
+
+
+// function produceSong(resolve, reject) 
+// {
+//     const artists = ['Taylor Swift', 'Beyonce', 'Drake', 'Ed Sheeran', 'Rihanna', 'The Weeknd', 'Harry Styles']
+//     const randomArtist = Math.floor(Math.random() * artists.length) //random number corresponding to one of the above artists
+
+//     const songs = ['Unstoppable', 'Numb Little Bug', 'About Damn Time', 'Music For a Sushi Restaurant', 'Anti-Hero', 'Glimpse of Us']
+//     const randomSong = Math.floor(Math.random() * songs.length) //random number corresponding to one of the above songs
+
+//     const randomOutcome = Math.round(Math.random()) //returns either 0 or 1 randomly for failure (0) or success (1)
+
+//     let successResult = artists[randomArtist] + ' has just released their newest song called ' + songs[randomSong]
+//     let failResult = artists[randomArtist] + ' has no new songs'
+
+//     setTimeout(() => randomOutcome ? resolve(successResult) : reject(failResult), 1000)
+
+//     //a longhand version of the above setTimeout, without arrow functions or conditional statements:
+//     //setTimeout(function() {
+//     //    if (randomOutcome == 1) resolve(successResult) //calls the resolve callback to indicate successful promise resolution, native to promise producer functions
+//     //    else reject(failResult) //calls the reject callback to indicate failed promise resolution, native to promise producer functions
+//     //}, 1000)
+// }
+// let songPromise = new Promise(produceSong)
+
+
+// //try doing .then, .catch and .finally
+// songPromise
+//     .then(successMsg => console.log(`Success: ${successMsg}`))
+//     .catch(failMsg => console.log(`Fail: ${failMsg}`))
+//     .finally()
+
+
+
+
+//     //first run these commands :
+// // 1. npm init (to initialise this script with the npm)
+// // 2. npm install node-fetch (to install the browser function 'fetch' for node.js)
+// // 3. add "type": "module", to package.json
+// import fetch from 'node-fetch'
+
+
+// fetch('https://jsonplaceholder.typicode.com/posts/10') //sample public JSON API for use in testing
+//     .then(response => response.json()) //this gets the entire HTTP response, so we use the .json() function which also returns a promise
+//     .then(json => console.log(`Post #10: ${json.title}`)) //this promise includes the json returned from the fetched URL if successful
+//     .catch(error => console.error(`Caught error: ${error}`)) //can optionally include this to show any errors
+//     .finally(() => console.log('done fetching')) //can optionally include this after all fetching done
+
+// //try and get both fetch.then and await fetch type syntaxes working
+
+// fetch('https://jsonplaceholder.typicode.com/posts/3')
+//     .then(response => response.json())
+//     .then(json => console.log(`Post #3: ${json.title}`))
+//     .catch(error => console.error(`Caught error: ${error}`))
+
+// let post3 = await fetch('https://jsonplaceholder.typicode.com/posts/3')
+// let post3.json
+
+
+// create a function similar to fetchPostTitle that grabs the body of a particular post
+
+
+
+
+
+
+
+    function start() {
+        console.log('Started preparing pizza')
+    }
+
+    function makeBase() {
+        console.log('Pizza base is prepared')
+    }
+
+    function addCheese() {
+        console.log('Cheese is added on pizza')
+    }
+
+    function addToppings() {
+        console.log('Toppings are added on pizza')
+    }
+
+    function cook() {
+        console.log('Pizza is cooked')
+    }
+
+    function finish() {
+        console.log('Pizza is ready')
+    }
+
+    start();
+    makeBase();
+    addCheese();
+    addToppings();
+    cook();
+    finish();
+
+
+
+
+    function start() {
+        console.log('Started preparing Pizza'); 
+        setTimeout(makeBase, 100, addCheese, addToppings, cook, finish);
+    }
+    
+    const makeBase = function(...actions) {
+        console.log('Pizza Base is prepared');
+        setTimeout(actions.shift(), 500, ...actions)
+    }
+    
+    const addCheese = (...actions) => {
+        console.log('Cheese is added on Pizza');
+        setTimeout(actions.shift(), 200, ...actions)
+    }
+    
+    function addToppings(...actions) {
+        console.log('Toppings are added on Pizza')
+        setTimeout(actions.shift(), 300, ...actions)
+    }
+    
+    const cook = function(...actions) {
+        console.log('Pizza is cooked')
+        setTimeout(actions.shift(), 800, ...actions)
+    }
+    
+    const finish = (...actions) => {
+        console.log('Pizza is ready')
+    }
+    
+    start();
