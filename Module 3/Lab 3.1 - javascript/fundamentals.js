@@ -1,4 +1,5 @@
 console.log('\n QUESTION 1');
+console.log('\n');
 
 console.log(Number("" + 1 + 0));
 // 10
@@ -40,6 +41,7 @@ console.log(typeof(" \t \n" -2));
 
 
 console.log('\n QUESTION 2');
+console.log('\n');
 
 let three = "3" //<- These are strings
 let four = "4"
@@ -72,6 +74,7 @@ console.log(lessThan2);
 
 
 console.log('\n QUESTION 3');
+console.log('\n');
 
 if (0) console.log('#1 zero is true')
 // won't print
@@ -89,6 +92,7 @@ if (1) console.log('positive is true')
 
 
 console.log('\n QUESTION 4');
+console.log('\n');
 
 // let a = 2, b = 3;
 // let result = `${a} + ${b} is `;
@@ -109,6 +113,7 @@ console.log(result);
 
 
 console.log('\n QUESTION 5');
+console.log('\n');
 
 // function declaration
 
@@ -133,6 +138,7 @@ console.log(getGreeting('adam'));
 
 
 console.log('\n QUESTION 6');
+console.log('\n');
 
 const westley = {
     name: 'Westley',
@@ -171,6 +177,7 @@ const inigo = {
 
 
 console.log('\n QUESTION 7');
+console.log('\n');
 
 // need to use return this -basketballGame is 'this' (function is inside the object) and score is a property of it
 // can't call halfTime method outside of object so log basketballGame instead
@@ -213,7 +220,8 @@ const basketballGame = {
 
 
 
-    console.log('\n QUESTION 8');
+console.log('\n QUESTION 8');
+console.log('\n');
 
 // for...in loops for objects (use for...of for arrays)
 // imagine the 'for' as the 'if' in an if statement
@@ -255,6 +263,7 @@ printObject2(melbourne);
 
 
 console.log('\n QUESTION 9');
+console.log('\n');
 
 let teamSports = ['Hockey', 'Cricket', 'Volleyball'];
 let dog1 = 'Bingo';
@@ -297,6 +306,7 @@ console.log(cat1.name); // changed because it's pointing to the same reference a
 
 
 console.log('\n QUESTION 10');
+console.log('\n');
 
 
 function Person(name, age) {

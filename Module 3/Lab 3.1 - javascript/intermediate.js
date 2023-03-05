@@ -1,4 +1,5 @@
 console.log('\n QUESTION 1');
+console.log('\n');
 
 let myString = 'the quick brown fox jumps over the lazy dog';
 
@@ -31,6 +32,7 @@ console.log(ucFirstLetters(myString));
 
 
 console.log('\n QUESTION 2');
+console.log('\n');
 
 let longString = 'This is a really long string of some importance.';
 let mediumString = "Pls don't cut me off";
@@ -60,6 +62,7 @@ function truncate(string, max) {
 
 
 console.log('\n QUESTION 3');
+console.log('\n');
 
 const animals = ['Tiger', 'Giraffe']
 
@@ -104,7 +107,8 @@ console.log(findMatchingAnimals('h'));
 
 
 
-console.log('\n QUESTION 4')
+console.log('\n QUESTION 4');
+console.log('\n');
 
 // function camelCase (cssProp) {
 //     let words = cssProp.split('-')
@@ -140,7 +144,8 @@ function camelCase(cssProp) {
 
 
 
-console.log('\n QUESTION 5')
+console.log('\n QUESTION 5');
+console.log('\n');
 
 let twentyCents = 0.20
 let tenCents = 0.10
@@ -222,7 +227,8 @@ console.log(currencyOperation(0.2, 0.8, 'a',7));
 
 
 
-console.log('\n QUESTION 6')
+console.log('\n QUESTION 6');
+console.log('\n');
 
 function unique(duplicatesArray) {
     const newSet = new Set(duplicatesArray);
@@ -241,7 +247,8 @@ console.log(unique(zFighters));
 
 
 
-console.log('\n QUESTION 7')
+console.log('\n QUESTION 7');
+console.log('\n');
 
 const books = [
     { id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', year: 1925 },
@@ -308,7 +315,8 @@ console.log(addGenre());
 
 
 
-console.log('\n QUESTION 8')
+console.log('\n QUESTION 8');
+console.log('\n');
 
 const phoneBookABC = new Map() // an empty map to begin with
 
@@ -371,7 +379,8 @@ for (let entries of phoneBook.keys()) {
 
 
 
-console.log('\n QUESTION 9')
+console.log('\n QUESTION 9');
+console.log('\n');
 
 let salaries = {
     "Timothy" : 35000,
@@ -412,6 +421,7 @@ topEarner(salaries);
 
 
 console.log('\n QUESTION 10');
+console.log('\n');
 
 const today = new Date();
 console.log('Current time is ' + today.toLocaleString())
