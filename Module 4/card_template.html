@@ -1,62 +1,77 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            body {
+
+<head>
+    <style>
+        body {
             font-family: Arial, Helvetica, sans-serif;
             background-color: #e3f2fd;
-            }
-            .card {
+        }
+
+        .card {
             padding: 10px;
-            border: 2px solid lightgray;
+            border: 5px solid lightgray;
             margin: 10px;
             background-color: white;
-            }
-            .card-title {
+        }
+
+        .card-title {
             font-weight: 600;
             font-size: 3em;
             padding: 0 0 10px 0;
             border: 2px solid lightgray;
-            }
-            .card-description {
+        }
+
+        .card-description {
             font-weight: 400;
             font-size: 2em;
             border: 2px solid lightgray;
-            }
-            #card-list {
-            display: flex;
-            }
-        </style>
-    </head>
-    <body>
-        <template id="card-template">
-            <div class="card">
-                <div class="card-body">
-                    <div class="card-title"></div>
-                    <div class="card-text"></div>
-                </div>
-            </div>
-        </template>
-
-        <div id="card-list"></div>
-    </body>
-    <script>
-        function addCard(title, description) {
-        
-            const template = document.getElementById("card-template").content.cloneNode(true);
-            
-            
-            template.querySelector('.card-title').innerText = title;
-            template.querySelector('.card-text').innerText = description;
-            document.querySelector('#card-list').appendChild(template);
         }
-        // if ('content' in document.createElement('template')) {
-        addCard('Card #1', 'this is my first card');
-        addCard('Card #2', 'this is my second card');
-        addCard('Card #3', 'this is my third card');
-        addCard('Card #4', 'this is my fourth card');
-        // }
-    </script>
+
+        #card-list {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <template id="card-template">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title"></div>
+                <div class="card-text"></div>
+            </div>
+        </div>
+    </template>
+
+    <div id="card-list"></div>
+</body>
+<script>
+    function addCard(title, description) {
+
+        const template = document.getElementById("card-template").content.cloneNode(true);
+
+        template.querySelector('.card-title').innerText = title;
+        template.querySelector('.card-text').innerText = description;
+        document.querySelector('#card-list').appendChild(template);
+
+    }
+
+    // if ('content' in document.createElement('template')) {
+    addCard('Card #1', 'this is my first card');
+    addCard('Card #2', 'this is my second card');
+    addCard('Card #3', 'this is my third card');
+    addCard('Card #4', 'this is my fourth card');
+    // }
+
+    const data = [{ name: 'bob', age: 23 }, { name: 'alice', age: 39 }]
+
+    data.forEach(entry => {
+        console.log(entry);
+    });
+
+</script>
+
 </html>
 
 
@@ -67,7 +82,7 @@ Call the new addCard function 2 or 3 times to create multiple cards with differe
 Examine the generated HTML using the Dev Inspector browser tool to see how it looks -->
 
 
-<!-- Exercise 2 :
+<!-- Exercise 2:
 Modify the code so that your cards are automatically
 generated based on data from an array. This way you
 will create as many cards as you need to display all the
