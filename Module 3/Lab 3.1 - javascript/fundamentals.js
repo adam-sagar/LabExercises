@@ -43,7 +43,7 @@ console.log(typeof(" \t \n" -2));
 console.log('\n QUESTION 2');
 console.log('\n');
 
-let three = "3" //<- These are strings
+let three = "3" // <- These are strings
 let four = "4"
 let thirty = "30" 
 
