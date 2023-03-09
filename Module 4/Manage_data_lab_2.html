@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        button {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>News</h2>
+    <p id="demo"></p>
+    <div></div>
+
+    <form onsubmit="submitform(event)">
+        <label for="id">News ID:</label>
+        <br>
+        <input type="text" id="id">
+        <br>
+        <label for="title">News Title:</label>
+        <br>
+        <input type="text" id="title">
+        <br>
+        <label for="content">News content:</label>
+        <br>
+        <input type="text" id="content">
+        <br>
+        <button>Submit</button>
+    </form>
+
+    <script>
+
+        function submitform(event) {
+            event.preventDefault();
+            let title = document.getElementById('title').value;
+            let content = document.getElementById('content').value;
+            let id = document.getElementById('id').value;
+            news.push({ id, title, content });
+        }
+
+        let output = document.querySelector("div");
+
+        let news = [
+            { id: 1, title: 'News1', content: "bla" },
+            { id: 2, title: 'News2', content: "blabla" },
+            { id: 3, title: 'News3', content: "blablabla" },
+        ]
+
+        let timer = null;
+        let index = 0;
+
+        function printNews() {
+
+            output.innerHTML = "News ID: " + news[index].id + "<br>" +
+                "News Title: " + news[index].title + "<br>" +
+                "News content " + news[index].content + "<br>" + "<br>" + "<br>";
+            if (index === news.length - 1) {
+                clearInterval(timer);
+            } else {
+                index++;
+            }
+        }
+
+        timer = setInterval(printNews, 5000);
+
+    </script>
+
+</body>
+
+</html>

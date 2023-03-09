@@ -115,7 +115,6 @@
     function addPeople(name, age) {
 
         const template = document.getElementById("people-template").content.cloneNode(true);
-
         template.querySelector('.card-name').innerText = name;
         template.querySelector('.card-age').innerText = age;
         document.querySelector('#card-people').appendChild(template);

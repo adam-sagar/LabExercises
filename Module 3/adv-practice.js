@@ -1,38 +1,38 @@
-//SET TIMEOUT
+SET TIMEOUT
 
 
-// function printMessage(msg) {
-//     console.log(msg);
-// }
+function printMessage(msg) {
+    console.log(msg);
+}
 
-// const longDelay = setTimeout(printMessage, 5000, 'this is a long delay') //printMessage is a reference to the function - it's not being executed
-// const shorterDelay = setTimeout(printMessage, 2000, 'this is a short delay')
-// //you don't need to console.log
+const longDelay = setTimeout(printMessage, 5000, 'this is a long delay') //printMessage is a reference to the function - it's not being executed
+const shorterDelay = setTimeout(printMessage, 2000, 'this is a short delay')
+//you don't need to console.log
  
 
 
-// //SET INTERVAL
+//SET INTERVAL
 
 
-// const interval = setInterval(printMessage, 5000, 'this will be repeated')
+const interval = setInterval(printMessage, 5000, 'this will be repeated')
 
-// setTimeout(() => clearInterval(interval), 11000)
-//will only repeat two times because it's cleared after 11sec, which is only enough time to do it twice
+setTimeout(() => clearInterval(interval), 11000)
+// will only repeat two times because it's cleared after 11sec, which is only enough time to do it twice
 
-// function repeatInterval(delay, limit)
-// {
+function repeatInterval(delay, limit)
+{
 
-//     let counter = 1;
+    let counter = 1;
 
-//     let intervalTimer = setInterval(function repeatThis() {
-//         console.log('repeatInterval: repeated '+counter+' of '+limit+' times');
-//         if (counter == limit) clearInterval(intervalTimer);
-//         counter++;
-//     }, delay);
+    let intervalTimer = setInterval(function repeatThis() {
+        console.log('repeatInterval: repeated '+counter+' of '+limit+' times');
+        if (counter == limit) clearInterval(intervalTimer);
+        counter++;
+    }, delay);
 
-// }
+}
 
-// repeatInterval(1000, 69);
+repeatInterval(1000, 69);
 
 
 // DECORATORS
