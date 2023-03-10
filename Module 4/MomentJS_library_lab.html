@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>Moment DateTime Format</title>
+    <!-- reference Moment.js library -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <h2>Moment Date</h2>
+    <!-- container for Moment.js output -->
+    <div id="displayMoment"></div>
+    <h2>JavaScript Date</h2>
+    <!-- container for JavaScript Date output -->
+    <div id="displayJsDate"></div>
+
+    <script type="text/javascript">
+        (function () {
+
+            // instantiate a moment object
+            // var NowMoment = moment();
+            // instantiate a JavaScript Date object
+            // var NowDate = new Date();
+
+            // var eDisplayDate = document.getElementById('displayJsDate');
+            // eDisplayDate.innerHTML = NowDate;
+
+            // var birthday = new Date("1988-01-26");
+            // // display value of moment object in #displayMoment div
+            // var eDisplayMoment = document.getElementById('displayMoment');
+            // eDisplayMoment.innerHTML = NowMoment;
+            // // display value of Date object in #displayJsDate div
+            // var eDisplayDate = document.getElementById('displayJsDate');
+            // eDisplayDate.innerHTML = birthday;
+
+            // var startdate = moment().subtract(1, "days").format("DD-MM-YYYY");
+
+            // var a = moment();
+            // var b = moment('1988-26-01');
+            // // var b = a.add(1, 'year'); 
+            // a.format();
+            // b.format()
+            // var c = a - b
+            // var duration = moment.duration(c, 'milliseconds');
+            // var days = duration.asDays();
+            // console.log(days);
+            // // "2016-01-08T00:00:00-06:00"
+            // // NowDate = a
+            // var eDisplayDate = document.getElementById('displayJsDate');
+            // eDisplayDate.innerHTML = days
+
+            // var startdate = moment().subtract(1, "days").format("DD-MM-YYYY");
+
+            const now = moment();
+            const birthday = moment('1988-26-01');
+            now.format();
+            birthday.format();
+            const diff = now - birthday
+            const duration = moment.duration(diff, 'milliseconds');
+            const days = duration.asDays();
+            const months = duration.asMonths();
+            const years = duration.asYears();
+            console.log(days);
+            const sentence = `${years} years, ${months} months and ${days} days`
+            const eDisplayDate = document.getElementById('displayJsDate');
+            eDisplayDate.innerHTML = sentence
+
+        })();
+
+    </script>
+</body>
+
+</html>

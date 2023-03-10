@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Moment DateTime Format</title>
+    <!-- reference Moment.js library -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.23/moment-timezone-with-data.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <h2>Moment Date</h2>
+    <div id="displayMoment"></div>
+
+    <h2>JavaScript Date</h2>
+    <div id="displayJsDate"></div>
+
+    <h2>London Time</h2>
+    <div id="displayLondonTime"></div>
+
+    <h2>Closest Date</h2>
+    <div id="displayClosestDate"></div>
+
+    <h2>Moment Date Comparison</h2>
+    <div id="displayComparison"></div>
+
+    <script type="text/javascript">
+
+            const now = moment();
+            const birthday = moment('1988-26-01');
+
+            now.format();
+            birthday.format();
+
+            const diff = now - birthday
+
+            const duration = moment.duration(diff, 'milliseconds');
+            const years = duration.years();
+            const months = duration.months();
+            const days = duration.days();
+
+            const sentence = `${years} years, ${months} months and ${days} days`
+            document.getElementById('displayJsDate').innerHTML = sentence;
+            document.getElementById('displayMoment').innerHTML = now;
+
+            const londonTime = moment().tz("Europe/London").format('h:mm:ss a')
+            document.getElementById('displayLondonTime').innerHTML = londonTime;
+
+            const date1 = moment('2022-03-15');
+            const date2 = moment('2022-03-20');
+
+            date1.format();
+            date2.format();
+
+            const diff1 = Math.abs(now - date1);
+            const diff2 = Math.abs(now - date2);
+
+            let closetDate;
+            if (diff1 < diff2) {
+                closetDate = date1;
+            } else {
+                closetDate = date2;
+            }
+
+            document.getElementById('displayClosestDate').innerHTML = closetDate;
+
+            const isDate1BeforeDate2 = date1.isBefore(date2);
+            const isDate1AfterDate2 = date1.isAfter(date2);
+
+            let comparison;
+            if (isDate1BeforeDate2) {
+                comparison = 'Date 1 is before date 2'
+            } else {
+                comparison = 'Date 1 is after date 2'
+            }
+
+            document.getElementById('displayComparison').innerHTML = comparison;
+
+    </script>
+</body>
+</html>
