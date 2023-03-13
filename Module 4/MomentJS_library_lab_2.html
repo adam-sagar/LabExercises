@@ -25,17 +25,16 @@
     <script type="text/javascript">
 
             const now = moment();
-            const birthday = moment('1988-26-01');
+            const birthday = moment('1988-01-26');
 
             now.format();
             birthday.format();
 
-            const diff = now - birthday
+            const diff = moment.duration(now.diff(birthday));
 
-            const duration = moment.duration(diff, 'milliseconds');
-            const years = duration.years();
-            const months = duration.months();
-            const days = duration.days();
+            const years = diff.years();
+            const months = diff.months();
+            const days = diff.days();
 
             const sentence = `${years} years, ${months} months and ${days} days`
             document.getElementById('displayJsDate').innerHTML = sentence;
