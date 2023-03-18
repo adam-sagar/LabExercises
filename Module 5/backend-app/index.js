@@ -1,6 +1,6 @@
 const express = require('express') // requiring the express pacakage
 const testRoute = require('./routes/myTestRoute');
-const calculatorRoute = require('./routes/calculatorRoute');
+const calculatorRoute = require('./routes/calculatorRoute'); // where to find the file locally
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 const friendRoutes = require('./routes/friendRoutes');
@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use('/', express.static('public'));
 app.use('/mytest', testRoute);
-app.use('/calculator', calculatorRoute);
+app.use('/calculator', calculatorRoute); // where to find in the browser
 app.use('/friends', friendRoutes);
 app.use(
     '/api-docs',

@@ -22,7 +22,10 @@ router.get('/all', (req, res) => {
 
 router.get('/:id', (req, res) => {
     //gets the value stored in id via request parameters
+    // console.log(friends)
     let idParam = req.params.id;
+    // idParam = friends
+    // console.log(friends)
 
     let matchingFriend = friends.find(friend => friend.id == idParam)
     res.json(matchingFriend)
@@ -30,6 +33,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/new', (req, res) => {
     let newFriend = req.body;
+    newFriend.id = parseInt(newFriend.id)
     console.log(newFriend)
     friends.push(newFriend)
     res.json(newFriend)

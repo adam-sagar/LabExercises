@@ -19,7 +19,7 @@
 
     <button onclick="listFriends()">List All Friends</button>
 
-    <button onclick="getRandomFriend()">Choose Random Friend</button>
+    <button onclick="fetchRandomFriend()">Choose Random Friend</button>
 
     <hr>
 
@@ -28,8 +28,14 @@
 
         <label for="newFriendName">New Friend Name:</label><input name="name" id="newFriendName"/>
 
+        <label for="newFriendAge">New Friend Age:</label><input name="age" id="newFriendAge"/>
+
+        <label for="newFriendHeight">New Friend Height:</label><input name="height" id="newFriendHeight"/>
+
         <button>Add New Friend</button>
         <div class="resultMsg"></div>
+
+        
     </form>
 
     <script>
@@ -47,12 +53,21 @@
             })
         }
 
-        function getRandomFriend() {
-            let randomId = Math.ceil(Math.random() * 3);
+        function getRandomFriend(friends) {
+            // fetch('/friends/all').then(resp => resp.json())
+            // .then(friends => {console.log(friends.length);})
+            console.log(friends.length)
+            let dynamicRandomness = friends.length
+            let randomId = Math.ceil(Math.random() * dynamicRandomness);
             fetch('/friends/'+randomId).then(resp => resp.json())
             .then(friend => {
                     document.getElementById('randomFriend').innerText = 'My best friend is '+friend.name
             })            
+        }
+
+        function fetchRandomFriend() {
+            fetch('/friends/all').then(resp => resp.json())
+            .then(friends => {getRandomFriend(friends)})
         }
 
         function addNewFriend(event) {
