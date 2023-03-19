@@ -1,6 +1,7 @@
 import React from "react";
 
 class PropsDisplayer extends React.Component {
+    
     render() {
         const stringProps = JSON.stringify(this.props);
 
