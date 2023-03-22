@@ -58,7 +58,7 @@ const students = [
         id: 9,
         name: 'Preshen Govender',
         location: 'NZ',
-        pet: 'R5-D4'
+        pet: 'PetBot 3000'
     }  
 ]
 
@@ -67,7 +67,7 @@ function StudentList() {
         return (
             <div className="StudentList componentBox">
                 <h2>IOD Software Engineering Students ({students.length} in cohort)</h2>
-                <ul className="hideBullets">
+                <ul className="hideBulletsStudents">
                 {
                     students.map((student, index) => /* in a pinch you can use the array index as the key but it's not recommended */
                     <Student name={student.name} location={student.location} pet={student.pet} key={student.id} />

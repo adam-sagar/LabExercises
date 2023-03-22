@@ -1,4 +1,5 @@
 import "./App.css";
+import Calculator from "./Calculator";
 import Greeting from "./Greeting";
 import HookGreeting from "./HookGreeting";
 import RenderEmojis from "./RenderEmojis";
@@ -9,6 +10,7 @@ function App() {
       <Greeting name="Adam" />
       <HookGreeting name="Adam" />
       <RenderEmojis />
+      <Calculator />
     </div>
   );
 }
