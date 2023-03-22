@@ -1,18 +1,11 @@
 //code taken from https://reactjs.org/docs/composition-vs-inheritance.html, see there for more detail
 
 import React from 'react'
-
-function FancyBorder(props) {
-    return (
-        <div className={'FancyBorder componentBox FancyBorder-' + props.color}>
-            {props.children} {/* everything in between the opening <FancyBorder> and closing </FancyBorder> tags on lines 16-18 */}
-        </div>
-    );
-}
+import FancyBorder from './FancyBorder';
 
 function Dialog(props) {
     return (
-      <FancyBorder color="black">
+      <FancyBorder color="red">
             <h1 className="Dialog-title">{props.title}</h1>
             <p className="Dialog-message">{props.message}</p>
             {props.children} {/* everything in between the opening <Dialog> and closing </Dialog> tags on lines 34-36 */}

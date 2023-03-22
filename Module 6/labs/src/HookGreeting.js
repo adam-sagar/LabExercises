@@ -4,9 +4,11 @@ function HookGreeting(props) {
 
     const [name, setName] = React.useState('World')
 
-    // const changeName = () => {
-    //     setName('Adam')
-    // }
+    const changeName = () => {
+        name === 'World' ? setName('Adam') : setName('World')
+    }
+
+    const buttonText = name === 'World' ? 'Change name' : 'Change back';
 
     return (
         <div className="HookGreeting componentBox">
@@ -14,7 +16,7 @@ function HookGreeting(props) {
             <h2>Hello {name}</h2>
             <p>Hello {props.name}</p>
             {/* <button onClick={() => changeName()}>Change Name</button> */}
-            <button onClick={() => setName('Adam')}>Change Name</button> {/* because changeName function is only one line, it can be included in the button */}
+            <button onClick={() => changeName()}>{buttonText}</button> {/* because changeName function is only one line, it can be included in the button */}
         </div>
     );
 }

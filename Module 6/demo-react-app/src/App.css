@@ -65,6 +65,10 @@
   background: linear-gradient(135deg, #140061, #50006E, #64018C, #6955FF, #4684FF, #1FA7FF) fixed;
 }
 
-.FancyBorder-black {
-  background: black;
+.FancyBorder-red {
+  background: linear-gradient(135deg, #610000, #6e1f00, #8c1101, #ff5555, #ff8146, #ffa51f) fixed;
+}
+
+.FancyBorder-green {
+  background: linear-gradient(135deg, #3c6100, #318500, #6cbe00, #69ff55, #46ff93, #1fffb4) fixed;
 }

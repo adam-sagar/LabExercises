@@ -8,8 +8,11 @@ function App() {
   return (
     <div className="App">
       <Greeting name="Adam" />
+
       <HookGreeting name="Adam" />
+
       <RenderEmojis />
+
       <Calculator />
     </div>
   );

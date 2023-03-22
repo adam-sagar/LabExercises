@@ -42,3 +42,5 @@
 button {
   margin: 5px;
 }
+
+.RenderEmojis { border: 3px solid black; margin: 1em; padding: 1em; text-align: center; background: lightyellow; }

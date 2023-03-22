@@ -14,6 +14,7 @@ import Reservation from "./components/Reservation";
 import StudentList from "./components/StudentList";
 import SignUpDialog from "./components/SignupDialog";
 import Breweries, { TypeFilter } from "./components/Breweries";
+import FancyBorder from "./components/FancyBorder";
 
 function formatName(name) {
   return name.first + " " + name.last;
@@ -34,7 +35,10 @@ function App() {
   return (
     <div className="App">
       <h2>{formatName(name)}</h2>
-      <MyComponent />
+      <FancyBorder color="green">
+        <MyComponent />
+      </FancyBorder>
+
       <PropsDisplayer name="Adam" location="Chch" />
 
       <Comment user={comment.author} date={comment.date} text={comment.text} />
