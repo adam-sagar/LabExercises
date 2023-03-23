@@ -36,7 +36,7 @@ function Calculator() {
             <button onClick={() => setOperator('/')}>÷</button>
             <input type="number" placeholder="Value 2" onChange={(event) => setSecondValue(event.target.value)}></input>
             <button onClick={() => handleCalculation()}>=</button>
-            <input type="number" value={result}></input>
+            <h3>{result}</h3>
         </div>
     )
 }

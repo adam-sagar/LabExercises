@@ -19,7 +19,7 @@ function RenderEmojis() {
     }
 
     return (
-        <div className="RenderEmojis">
+        <div className="RenderEmojis componentBox">
             <img src={emoji} width="200" height="200" alt="emojis" />
             <br/>
             <button onClick={toggleEmoji}>{buttonText}</button>

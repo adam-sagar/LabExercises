@@ -8,7 +8,7 @@ function HookLogin() {
     const [loggedIn, setLoggedIn] = React.useState(false)
     const [errorMessage, setErrorMessage] = React.useState('')
     const [email, setEmail] = React.useState('')
-    const [counter, setCounter] = React.useState(0)
+    const [loginAttempts, setLoginAttempts] = React.useState(0)
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -17,10 +17,20 @@ function HookLogin() {
         //login successful/true if both values exist and match
         let isLoggedIn = (username && password && username === password)
 
-        if (username !== password) {
-            setErrorMessage('Username and password do not match')
-            setCounter(counter + 1)
+        if (!loggedIn) {
+            let newAttempts = loginAttempts + 1
+
+            if (newAttempts === 5) {
+                setErrorMessage('Maximum login attempts exceeded. You are blocked. Sorry not sorry')
+            } else {
+                setErrorMessage('Unsuccessful login attempt #' + newAttempts + ' of 5')
+            }
+            setLoginAttempts(newAttempts)
         }
+        // if (username !== password) {
+        //     setErrorMessage('Username and password do not match')
+        //     setLoginAttempts(loginAttempts + 1)
+        // }
 
         setLoggedIn(isLoggedIn)
     }
@@ -43,7 +53,7 @@ function HookLogin() {
             {/* if we're logged in, use the Hello component to say hello */}
             <div>{loggedIn ? <Hello name={username} /> : 'Please log in'}</div>
 
-            {!loggedIn && counter < 5 &&
+            {!loggedIn && loginAttempts < 5 &&
 
                 <form onSubmit={handleLogin}>
                     <div className="formRow">
