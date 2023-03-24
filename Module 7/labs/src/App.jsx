@@ -1,13 +1,22 @@
 import './App.css'
-import Clock from './components/Clock'
-import RenderEmojis from './components/RenderEmojis'
+import Footer from './components/Footer'
+import NavBar from './components/NavBar'
+import { MoodProvider } from './context/EmojiContext'
+import AppRoutes from './routes/AppRoutes'
 
 function App() {
 
   return (
     <div className="App">
-      <Clock />
-      <RenderEmojis />
+      <MoodProvider>
+
+        <NavBar />
+
+        <AppRoutes />
+
+        <Footer />
+
+      </MoodProvider>
     </div>
   )
 }

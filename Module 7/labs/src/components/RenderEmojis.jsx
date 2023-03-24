@@ -1,26 +1,26 @@
 import React from "react";
+import { moods, MoodContext } from "../context/EmojiContext";
+
+// Updated to use the global context 
 
 function RenderEmojis() {
-
-    const happyEmoji = 'https://em-content.zobj.net/source/noto-emoji-animations/344/grinning-face-with-big-eyes_1f603.gif';
-    const sadEmoji = 'https://em-content.zobj.net/source/noto-emoji-animations/344/loudly-crying-face_1f62d.gif';
     
-    const [emoji, setEmoji] = React.useState(happyEmoji)
+    const {mood, setMood, isHappy} = React.useContext(MoodContext)
 
-    const buttonText = emoji === happyEmoji ? 'Make sad' : 'Make happy';
+    const buttonText = isHappy ? 'Make sad' : 'Make happy';
 
         function toggleEmoji() {
 
-            if (emoji === sadEmoji) {
-                setEmoji(happyEmoji)
+            if (isHappy) {
+                setMood(moods.sad)
             } else {
-                setEmoji(sadEmoji);
+                setMood(moods.happy);
             }
     }
 
     return (
         <div className="RenderEmojis componentBox">
-            <img src={emoji} width="200" height="200" alt="emojis" />
+            <img src={mood} width="50" height="50" alt="emojis" />
             <br/>
             <button onClick={toggleEmoji}>{buttonText}</button>
         </div>

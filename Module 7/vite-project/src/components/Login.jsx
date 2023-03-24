@@ -20,9 +20,15 @@ function Login() {
         //login successful/true if both values exist and match
         let isLoggedIn = (username && password && username === password)
 
-        if (username !== password) {
-            setErrorMessage('Username and password do not match')
-            setLoginAttempts(loginAttempts + 1)
+        if (!loggedIn) {
+            let newAttempts = loginAttempts + 1
+
+            if (newAttempts === 5) {
+                setErrorMessage('Maximum login attempts exceeded. You are blocked. Sorry not sorry')
+            } else {
+                setErrorMessage('Unsuccessful login attempt #' + newAttempts + ' of 5')
+            }
+            setLoginAttempts(newAttempts)
         }
 
         setLoggedIn(isLoggedIn)

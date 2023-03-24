@@ -1,18 +1,21 @@
-import { useState } from 'react'
 import './App.css'
-import Counter from './components/Counter'
-import Login from './components/Login'
-import WindowResizer from './components/WindowResizer'
+import Footer from './components/Footer'
+import NavBar from './components/NavBar'
 import { ThemeProvider } from './context/ThemeContext'
+import AppRoutes from './routes/AppRoutes'
 
 function App() {
 
   return (
     <div className="App">
       <ThemeProvider>
-        <Counter />
-        <WindowResizer />
-        <Login />
+
+        <NavBar />
+
+        <AppRoutes />
+        
+        <Footer />
+
       </ThemeProvider>
     </div>
   )

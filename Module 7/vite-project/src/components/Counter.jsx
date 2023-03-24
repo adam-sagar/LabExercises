@@ -21,8 +21,7 @@ function Counter() {
             <button onClick={() => setCount(count+1)}>Click Me!</button>
             <button onClick={() => setCount(0)}>Reset Me!</button>
 
-            <input type="checkbox"
-                value={darkMode} onChange={() => darkMode ? themeContext.setTheme(themes.light) : themeContext.setTheme(themes.dark)} />
+            <input type="checkbox" value={darkMode} onChange={() => darkMode ? themeContext.setTheme(themes.light) : themeContext.setTheme(themes.dark)} />
 
             {/* how could we make a reset button to reset the count back to zero? */}
         </div>
