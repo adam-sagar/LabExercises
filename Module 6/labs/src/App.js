@@ -3,6 +3,7 @@ import Calculator from "./Calculator";
 import Greeting from "./Greeting";
 import HookGreeting from "./HookGreeting";
 import RenderEmojis from "./RenderEmojis";
+import ToggleEmoji from "./ToggleEmoji";
 
 function App() {
   return (
@@ -12,8 +13,8 @@ function App() {
       <HookGreeting name="Adam" />
 
       <RenderEmojis />
-
-      <Calculator />
+      
+      <Calculator />      
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import ToggleEmoji from "./ToggleEmoji";
 
 function RenderEmojis() {
 
@@ -23,7 +24,9 @@ function RenderEmojis() {
             <img src={emoji} width="200" height="200" alt="emojis" />
             <br/>
             <button onClick={toggleEmoji}>{buttonText}</button>
+            <ToggleEmoji />
         </div>
+        
     )
 }
 export default RenderEmojis;
