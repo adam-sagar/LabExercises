@@ -4,7 +4,13 @@
   text-align: center;
 }
 
-.componentBox { border: 1px solid #aaa; margin: 1em; padding: 1em; text-align: center; background: #efefef }
+.componentBox {
+  border: 1px solid #aaa;
+  margin: 1em;
+  padding: 1em;
+  text-align: center;
+  background: #efefef;
+}
 
 .NavBar {
   background: #0E2F38;
@@ -38,12 +44,29 @@
   color: #eee;
 }
 
-.Posts {
-  height: 100vh;
-}
-
 .Dashboard {
   height: 100vh;
 }
 
+ul {
+  list-style-type: none;
+}
 
+.Posts {
+  background: linear-gradient(to bottom, black, midnightblue);
+  border-radius: 20px;
+  width: 50%;
+  margin: 10px auto;
+  padding: 5px;
+  color: white;
+}
+
+.Posts b {
+  color: gold;
+  margin: 5px;
+}
+
+.MorePosts {
+  border: 2px solid hotpink;
+  margin: 10px;
+}

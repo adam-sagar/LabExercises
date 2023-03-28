@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useContext} from 'react'
 import { ThemeContext, themes } from '../context/ThemeContext'
+import Button from 'react-bootstrap/Button';
 
 function Counter() {
 
@@ -18,10 +19,11 @@ function Counter() {
     return (
         <div className="Counter componentBox" style={{ backgroundColor: themeContext.theme.background, color: themeContext.theme.foreground }}>
             <p>You clicked {count} times</p>
-            <button onClick={() => setCount(count+1)}>Click Me!</button>
-            <button onClick={() => setCount(0)}>Reset Me!</button>
-
-            <input type="checkbox" value={darkMode} onChange={() => darkMode ? themeContext.setTheme(themes.light) : themeContext.setTheme(themes.dark)} />
+            <Button variant="outline-success" onClick={() => setCount(count+1)}>Click Me!</Button>
+            <br />
+            <Button variant="outline-danger" onClick={() => setCount(0)}>Reset Me!</Button>
+            <br />
+            Change theme <input type="checkbox" value={darkMode} onChange={() => darkMode ? themeContext.setTheme(themes.light) : themeContext.setTheme(themes.dark)} />
 
             {/* how could we make a reset button to reset the count back to zero? */}
         </div>

@@ -9,6 +9,7 @@ function NavBar() {
                 <li><NavLink to="/login">Login</NavLink></li>
                 <li><NavLink to="/counter">Counter</NavLink></li>
                 <li><NavLink to="/windowresizer">Window Resizer</NavLink></li>
+                <li><NavLink to="/studentlist">Student List</NavLink></li>
             </ul>
         </div>
     )

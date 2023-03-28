@@ -88,3 +88,11 @@
   color: #eee;
   width: 100%;
 }
+
+.Posts {
+  list-style-type: none;
+  background-color: lightgray;
+  border-radius: 20px;
+  margin: 20px auto;
+  width: 75%;
+}

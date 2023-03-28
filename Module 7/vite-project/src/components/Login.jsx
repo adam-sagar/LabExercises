@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../context/UserContext';
 import useFormInput from '../hooks/useFormInput';
 
 function Login() {
 
     const usernameProps = useFormInput('')
     const passwordProps = useFormInput('')
+    const { username, setUsername } = useContext(UserContext)
 
     const [loggedIn, setLoggedIn] = React.useState(false)
     const [errorMessage, setErrorMessage] = React.useState('')
@@ -12,15 +14,15 @@ function Login() {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        let username = usernameProps.value
+        let user = usernameProps.value
         let password = passwordProps.value
 
-        console.log(username + ' ' + password)
+        console.log(user + ' ' + password)
 
         //login successful/true if both values exist and match
-        let isLoggedIn = (username && password && username === password)
+        let isLoggedIn = (user && password && user === password)
 
-        if (!loggedIn) {
+        if (!isLoggedIn) {
             let newAttempts = loginAttempts + 1
 
             if (newAttempts === 5) {
@@ -29,6 +31,9 @@ function Login() {
                 setErrorMessage('Unsuccessful login attempt #' + newAttempts + ' of 5')
             }
             setLoginAttempts(newAttempts)
+        } else {
+            setUsername(user)
+            setErrorMessage('')
         }
 
         setLoggedIn(isLoggedIn)
@@ -38,7 +43,7 @@ function Login() {
         <div className="Login componentBox">
 
             {/* if we're logged in, use the Hello component to say hello */}
-            <div>{loggedIn ? 'Hello' + usernameProps.value : 'Please log in'}</div>
+            <div>{loggedIn ? 'Hello ' + username : 'Please log in'}</div>
 
             {!loggedIn && loginAttempts < 5 &&
 
@@ -53,11 +58,11 @@ function Login() {
                         {/* every time the input changes, store the latest value into state */}
                         <input type="password" id="password" {...passwordProps} />
                     </div>
-                    <div>{errorMessage}</div>
+                    
                     <button>Login</button>
                 </form>
             }
-
+            <p>{errorMessage}</p>
         </div>
     );
 }

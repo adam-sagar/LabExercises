@@ -1,15 +1,23 @@
+import Accordion from 'react-bootstrap/Accordion';
 
 function About() {
 
-    return (
-        <div className="About">
-            <h1>About</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mattis lobortis est, id ornare elit rutrum et.
-                Nulla bibendum hendrerit dolor eget egestas. Nunc sit amet ante id ante rutrum rutrum ut ut turpis. 
-                Morbi molestie fermentum vulputate. Vestibulum eget felis ut lacus elementum sagittis. 
-                Curabitur ornare velit sit amet est laoreet placerat. Donec egestas consectetur diam ac porttitor. Ut nec posuere mi, quis fringilla nisl.</p>
-        </div>
-    )
+        return (
+            <Accordion defaultActiveKey={null} className="About componentBox">
+                <Accordion.Item eventKey="0">
+                    <Accordion.Header>About</Accordion.Header>
+                    <Accordion.Body>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                    </Accordion.Body>
+                </Accordion.Item>
+            </Accordion>
+        );
 }
 
 export default About

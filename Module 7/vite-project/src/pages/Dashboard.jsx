@@ -1,7 +1,6 @@
 import React from 'react'
 import {Outlet, useNavigate} from 'react-router-dom'
-
-
+import Button from 'react-bootstrap/Button';
 
 function Dashboard() {
     const navigate = useNavigate();
@@ -11,8 +10,8 @@ function Dashboard() {
             <h1>Dashboard</h1>
 
             <Outlet />            
-            <button onClick={() => navigate('/tasks')}>Show Tasks</button>
-            <button onClick={() => navigate('/messages')}>Show Messages</button>
+            <Button variant="outline-primary" onClick={() => navigate('/tasks')}>Show Tasks</Button>
+            <Button variant="outline-primary" onClick={() => navigate('/messages')}>Show Messages</Button>
 
         </div>
     )

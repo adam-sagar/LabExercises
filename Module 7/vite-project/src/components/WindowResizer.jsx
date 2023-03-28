@@ -3,6 +3,7 @@ import useWindowResize from "../hooks/useWindowResize";
 import useOnlineStatus from "../hooks/useOnlineStatus";
 import { ThemeContext, themes } from "../context/ThemeContext";
 import { useContext } from "react";
+import Button from 'react-bootstrap/Button';
 
 function WindowResizer() {
 
@@ -14,11 +15,11 @@ function WindowResizer() {
 
     return (
         <div className="WindowResizer componentBox" style={{ backgroundColor: themeContext.theme.background, color: themeContext.theme.foreground }}>
-            <button onClick={setIsToggled}>{isToggled ? 'Toggled' : 'Click to Toggle'}</button>
+            <Button variant="outline-primary" onClick={setIsToggled}>{isToggled ? 'Toggled' : 'Click to Toggle'}</Button>
             <div>{windowSize.width <= 768 ? 'Small Screen Detected' : 'Large Screen Detected'}</div>
             <p>{isOnline ? 'Online' : 'Offline'}</p>
 
-            <input type="checkbox" value={darkMode} onChange={() => darkMode ? themeContext.setTheme(themes.light) : themeContext.setTheme(themes.dark)} />
+            Change theme <input type="checkbox" value={darkMode} onChange={() => darkMode ? themeContext.setTheme(themes.light) : themeContext.setTheme(themes.dark)} />
         </div>
     );
 }
