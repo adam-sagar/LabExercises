@@ -17,9 +17,8 @@ function PostsList() {
             <ul>
                 {data.map(post => (
                     <li key={post.id} className="Posts">
-                        <p><b>id:</b> {post.id}</p>
-                        <p><b>Title:</b> {post.title}</p>
-                        <Link to={'/moreposts/'+post.id}>Read more...</Link>
+                        <p><b>Post:</b> {post.id}</p><p><b>Title:</b> {post.title}</p>
+                        <Link to={'/moreposts/' + post.id}>Read more...</Link>
                     </li>
                 ))}
             </ul>

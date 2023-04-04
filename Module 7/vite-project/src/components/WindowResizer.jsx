@@ -1,7 +1,7 @@
 import useToggle from "../hooks/useToggle";
 import useWindowResize from "../hooks/useWindowResize";
 import useOnlineStatus from "../hooks/useOnlineStatus";
-import { ThemeContext, themes } from "../context/ThemeContext";
+import { ThemeContext, themes } from "../context/MyThemeContext";
 import { useContext } from "react";
 import Button from 'react-bootstrap/Button';
 

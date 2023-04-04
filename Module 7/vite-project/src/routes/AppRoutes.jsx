@@ -33,14 +33,14 @@ function AppRoutes(props) {
             {/* <Route path='/login' element={<Login {...props} />} /> */}
             <Route path='/login' element={<SignInMUI {...props} />} />
 
-            <Route path='/counter' element={<Counter {...props} />} />
+            {/* <Route path='/counter' element={<Counter {...props} />} /> */}
 
             <Route path="/moreposts" element={<PostsPage {...props} />} >
                 <Route index element={<PostsList />} />
                 <Route path=":id" element={<PostDetails />} />
             </Route>
 
-            <Route path='/windowresizer' element={<WindowResizer {...props} />} />
+            {/* <Route path='/windowresizer' element={<WindowResizer {...props} />} /> */}
 
             <Route path='/studentlist' element={<StudentList {...props} />} >
                 <Route path=':id' element={<StudentCard/>} />

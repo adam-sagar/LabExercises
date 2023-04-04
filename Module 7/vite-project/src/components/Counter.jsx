@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react'
-import { ThemeContext, themes } from '../context/ThemeContext'
+import { ThemeContext, themes } from '../context/MyThemeContext'
 import Button from 'react-bootstrap/Button';
 
 function Counter() {

@@ -16,7 +16,7 @@ export const themes = {
 export const ThemeContext = React.createContext(themes.light);
 
 //the provider wrapper for this context. uses its own state to keep track of which theme is in use
-export const ThemeProvider = ({ children }) => {
+export const MyThemeProvider = ({ children }) => {
     const [theme, setTheme] = React.useState(themes.light);
 
     return (
