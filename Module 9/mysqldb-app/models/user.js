@@ -29,3 +29,10 @@ User.init({
 )
 
 module.exports = User;
+
+
+
+// references: {
+//     model: User, //reference to another model
+//     key: 'id', //column name of the referenced model
+// }
