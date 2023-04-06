@@ -1,37 +1,39 @@
 const { DataTypes, Model } = require("sequelize");
 let dbConnect = require("../dbConnect");
 const sequelizeInstance = dbConnect.Sequelize;
+const User = require("./user")
 
-class User extends Model { }
+class Post extends Model { }
 
 //Sequelize will create this table if it doesn't exist on startup
-User.init({
+Post.init({
     id: {
         type: DataTypes.INTEGER, allowNull: false, autoIncrement: true, primaryKey: true
     },
-    Username: {
-        type: DataTypes.STRING, allowNull: false, required: true, unique: true
+    UserID: {
+        type: DataTypes.INTEGER, allowNull: true, required: true,
+        references: {
+            model: User, //reference to another model
+            key: 'id' //column name of the referenced model
+        }
     },
-    First_Name: {
+    Title: {
         type: DataTypes.STRING, allowNull: false, required: true
     },
-    Last_Name: {
-        type: DataTypes.STRING, allowNull: false, required: true
-    },
-    Email: {
+    Description: {
         type: DataTypes.STRING, allowNull: false, required: true, unique: true
     },
-    Password: {
+    Image: {
         type: DataTypes.STRING, allowNull: false, required: true
     }
 },
     {
-        sequelize: sequelizeInstance, modelName: 'users', //use lowercase plural format
+        sequelize: sequelizeInstance, modelName: 'posts', //use lowercase plural format
         timestamps: true, freezeTableName: true
     }
 )
-
-module.exports = User;
+    
+module.exports = Post;
 
 
 
